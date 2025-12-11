@@ -27,11 +27,17 @@ export async function generateMetadata(
     return {
         title: post.seoTitle || post.title,
         description: post.seoDescription || `Read more about ${post.title}`,
+        title: post.seoTitle || post.title,
+        description: post.seoDescription || `Read more about ${post.title}`,
         openGraph: {
-            images: post.mainImage ? [urlFor(post.mainImage).width(1200).height(630).url()] : [],
+            images: post.mainImageExternalUrl
+                ? [post.mainImageExternalUrl]
+                : (post.mainImage ? [urlFor(post.mainImage).width(1200).height(630).url()] : []),
         }
     };
 }
+
+
 
 export default async function ArticlePage(props: { params: Promise<{ slug: string }> }) {
     const params = await props.params;
@@ -46,7 +52,14 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
             {/* Header/Hero */}
             <div className="bg-slate-900 text-white relative py-20 px-3">
                 <div className="absolute inset-0 overflow-hidden opacity-30">
-                    {post.mainImage && (
+                    {post.mainImageExternalUrl ? (
+                        /* eslint-disable-next-line @next/next/no-img-element */
+                        <img
+                            src={post.mainImageExternalUrl}
+                            alt={post.title}
+                            className="w-full h-full object-cover blur-sm"
+                        />
+                    ) : post.mainImage && (
                         <Image
                             src={urlFor(post.mainImage).width(1920).height(1080).url()}
                             alt={post.title}
@@ -83,7 +96,16 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
                     {/* Main Article Content */}
                     <div className="lg:col-span-2">
                         <div className="bg-white rounded-xl shadow-xl p-4 md:p-12 overflow-hidden">
-                            {post.mainImage && (
+                            {post.mainImageExternalUrl ? (
+                                <div className="mb-10 rounded-lg overflow-hidden shadow-sm">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img
+                                        src={post.mainImageExternalUrl}
+                                        alt={post.title}
+                                        className="w-full h-auto"
+                                    />
+                                </div>
+                            ) : post.mainImage && (
                                 <div className="mb-10 rounded-lg overflow-hidden shadow-sm">
                                     <Image
                                         src={urlFor(post.mainImage).width(1200).height(800).url()}

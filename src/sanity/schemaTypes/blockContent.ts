@@ -91,5 +91,37 @@ export default defineType({
                 }
             }
         }),
+        defineArrayMember({
+            type: 'object',
+            name: 'externalImage',
+            title: 'External / Cloudinary Image',
+            fields: [
+                {
+                    name: 'url',
+                    type: 'url',
+                    title: 'Image URL',
+                    description: 'Paste the full URL (e.g. from Cloudinary).',
+                    validation: (Rule) => Rule.uri({ scheme: ['http', 'https'] })
+                },
+                {
+                    name: 'alt',
+                    type: 'string',
+                    title: 'Alt Text',
+                    description: 'Description for accessibility/SEO.'
+                }
+            ],
+            preview: {
+                select: {
+                    title: 'alt',
+                    subtitle: 'url'
+                },
+                prepare({ title, subtitle }) {
+                    return {
+                        title: title || 'External Image',
+                        subtitle: subtitle
+                    }
+                }
+            }
+        }),
     ],
 })

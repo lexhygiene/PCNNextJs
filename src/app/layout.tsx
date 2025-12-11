@@ -10,8 +10,12 @@ const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const montserrat = Montserrat({ subsets: ["latin"], variable: '--font-montserrat' });
 
 export const metadata: Metadata = {
-  title: "The Green Shield Dispatch",
-  description: "Professional Pest Control Advice & Magazine",
+  title: {
+    template: '%s | Pest Control Noida',
+    default: 'Pest Control Noida | Expert Termite & Pest Management Services',
+  },
+  description: 'Pro Pest Control Noida offers government-approved, eco-friendly termite, rodent, and cockroach control services. Residential & Commercial pest removal in Noida & NCR.',
+  keywords: ['Pest Control Noida', 'Termite Control in Noida', 'Pest Control Service Noida', 'Cockroach Control Noida', 'Rodent Control Noida'],
 };
 
 export default function RootLayout({

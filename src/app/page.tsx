@@ -11,6 +11,7 @@ export const revalidate = 60;
 export default async function Home() {
   // Fetch posts from Sanity
   const posts = await client.fetch(POSTS_QUERY);
+  console.log('Sanity Posts Data:', JSON.stringify(posts, null, 2));
 
   return (
     <div className="min-h-screen bg-[#F7F9F9]">
@@ -21,10 +22,10 @@ export default async function Home() {
         <div className="container mx-auto max-w-6xl text-center relative z-10">
           <span className="text-gold font-bold tracking-widest uppercase text-sm mb-6 block">Professional Pest Control Services</span>
           <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight">
-            Protecting Your Home <br className="hidden md:block" /> From Unwanted Guests
+            Expert Pest Control <br className="hidden md:block" /> in Noida & NCR
           </h1>
           <p className="text-2xl md:text-2xl text-white/80 max-w-3xl mx-auto font-light leading-relaxed mb-10">
-            Safe, effective, and eco-friendly pest control solutions for Noida and NCR.
+            Government-approved, eco-friendly <strong>Pest Control in Noida</strong>. We specialize in <strong>Termite Control in Noida</strong>, cockroach removal, and rodent defense.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-gold hover:bg-yellow-600 text-white font-bold py-4 px-10 rounded-full transition-all text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
@@ -44,8 +45,8 @@ export default async function Home() {
             <div className="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center text-eco-green mb-8">
               <ShieldCheck className="w-7 h-7" />
             </div>
-            <h3 className="text-2xl font-sans font-bold text-slate-800 mb-4">Termite Control</h3>
-            <p className="text-slate-500 mb-8 leading-relaxed">Protect your property investment with our advanced, odor-free drill-fill-seal treatment.</p>
+            <h3 className="text-2xl font-sans font-bold text-slate-800 mb-4">Termite Control in Noida</h3>
+            <p className="text-slate-500 mb-8 leading-relaxed">Protect your property investment with our advanced, odor-free drill-fill-seal termite treatment in Noida.</p>
             <Link href="/pest-library" className="text-eco-green font-bold text-sm tracking-wide uppercase hover:opacity-80">Learn More</Link>
           </div>
 
@@ -53,8 +54,8 @@ export default async function Home() {
             <div className="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center text-gold mb-8">
               <Bug className="w-7 h-7" />
             </div>
-            <h3 className="text-2xl font-sans font-bold text-slate-800 mb-4">General Pest</h3>
-            <p className="text-slate-500 mb-8 leading-relaxed">Complete sanitization against cockroaches, ants, and mosquitoes for a healthier home.</p>
+            <h3 className="text-2xl font-sans font-bold text-slate-800 mb-4">General Pest Control</h3>
+            <p className="text-slate-500 mb-8 leading-relaxed">Complete sanitization against cockroaches, ants, and mosquitoes for a healthier home in Noida.</p>
             <Link href="/pest-library" className="text-gold font-bold text-sm tracking-wide uppercase hover:opacity-80">View All Pests</Link>
           </div>
 
@@ -86,7 +87,14 @@ export default async function Home() {
             posts.slice(0, 3).map((post: any) => (
               <Link href={`/articles/${post.slug.current}`} key={post._id} className="group cursor-pointer">
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                  {post.mainImage && (
+                  {post.mainImageExternalUrl ? (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img
+                      src={post.mainImageExternalUrl}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : post.mainImage && (
                     <Image
                       src={urlFor(post.mainImage).width(800).height(600).url()}
                       alt={post.title}

@@ -72,7 +72,16 @@ export default function PestFeed({ pests }: PestFeedProps) {
                         <Link href={`/pest-library/${pest.slug.current}`} key={pest._id} className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 h-full">
                             {/* Image Container */}
                             <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                                {pest.image ? (
+                                {pest.mainImageExternalUrl ? (
+                                    <div className="relative w-full h-full">
+                                        <Image
+                                            src={pest.mainImageExternalUrl}
+                                            alt={pest.commonName}
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                                        />
+                                    </div>
+                                ) : pest.image ? (
                                     <Image
                                         src={urlFor(pest.image).width(600).height(450).url()}
                                         alt={pest.commonName}

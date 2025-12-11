@@ -20,6 +20,13 @@ export default defineType({
             },
         }),
         defineField({
+            name: 'parent',
+            title: 'Parent Region',
+            type: 'reference',
+            to: [{ type: 'serviceArea' }],
+            description: 'Select the parent region if this is a sub-area (e.g., Select "Noida" for "Noida Sector 18").'
+        }),
+        defineField({
             name: 'seoDescription',
             title: 'SEO Description',
             type: 'text',

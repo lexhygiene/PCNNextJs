@@ -35,6 +35,13 @@ export default defineType({
             ]
         }),
         defineField({
+            name: 'mainImageExternalUrl',
+            title: 'External Main Image URL',
+            type: 'url',
+            description: 'Use a Cloudinary/External URL instead of uploading an image. This takes priority over "Main image".',
+            validation: (Rule) => Rule.uri({ scheme: ['http', 'https'] })
+        }),
+        defineField({
             name: 'categories',
             title: 'Categories',
             type: 'array',
@@ -44,6 +51,7 @@ export default defineType({
             name: 'publishedAt',
             title: 'Published at',
             type: 'datetime',
+            initialValue: () => new Date().toISOString(),
         }),
         defineField({
             name: 'body',
@@ -62,6 +70,13 @@ export default defineType({
             type: 'text',
             rows: 3,
             description: 'Meta description for search engines.'
+        }),
+        defineField({
+            name: 'featured',
+            title: 'Featured (Pin to Top)',
+            type: 'boolean',
+            initialValue: false,
+            description: 'Toggle ON to pin this post to the top of the list.'
         })
     ],
 

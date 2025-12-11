@@ -31,6 +31,12 @@ export default defineType({
             options: { hotspot: true },
         }),
         defineField({
+            name: 'mainImageExternalUrl',
+            title: 'Primary Image URL (Cloudinary)',
+            type: 'url',
+            description: 'Optional: Use an external URL (e.g., Cloudinary) instead of uploading an image.',
+        }),
+        defineField({
             name: 'dangerLevel',
             title: 'Danger Level',
             type: 'string',

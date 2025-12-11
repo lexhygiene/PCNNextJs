@@ -7,8 +7,8 @@ import QuoteForm from "@/components/QuoteForm";
 export const revalidate = 60;
 
 export const metadata = {
-    title: 'Pest Library | The Green Shield',
-    description: 'Identify common household pests and learn how to prevent them.',
+    title: 'Identify Pests in Noida | Pest Control Noida Library',
+    description: 'Identify common pests in Noida like termites, cockroaches, and rodents. Learn prevention tips from Pest Control Noida experts.',
 };
 
 export default async function PestLibraryPage() {
@@ -20,10 +20,10 @@ export default async function PestLibraryPage() {
             <div className="relative bg-gradient-to-br from-slate-900 to-eco-green text-white py-24 px-4 overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] animate-pulse"></div>
                 <div className="container mx-auto max-w-5xl text-center relative z-10">
-                    <span className="text-gold font-bold tracking-widest uppercase text-xs mb-4 block">Identify & Prevent</span>
-                    <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">Pest Library</h1>
+                    <span className="text-gold font-bold tracking-widest uppercase text-xs mb-4 block">Identify Pests in Noida</span>
+                    <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">Pest Library & Identification</h1>
                     <p className="text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed">
-                        A comprehensive guide to identifying household pests, understanding their behavior, and finding the right solutions.
+                        Comprehensive guide to identifying pests in Noida, understanding their behavior, and finding the right solutions.
                     </p>
                 </div>
             </div>

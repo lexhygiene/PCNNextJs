@@ -29,7 +29,11 @@ export async function generateMetadata(
         title: `${pest.commonName} Control & Identification | Pest Library`,
         description: `Learn how to identify and get rid of ${pest.commonName} (${pest.scientificName}). Expert advice on behavior, habitat, and prevention.`,
         openGraph: {
-            images: pest.image ? [urlFor(pest.image).width(1200).height(630).url()] : [],
+            images: pest.mainImageExternalUrl
+                ? [pest.mainImageExternalUrl]
+                : pest.image
+                    ? [urlFor(pest.image).width(1200).height(630).url()]
+                    : [],
         }
     };
 }
@@ -48,7 +52,14 @@ export default async function PestPage(props: { params: Promise<{ slug: string }
             <div className="bg-white shadow-sm border-b border-gray-100">
                 <div className="container mx-auto px-4 py-8 md:py-12 flex flex-col md:flex-row items-start md:items-center gap-8">
                     <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-gray-50 shadow-inner flex-shrink-0 bg-gray-200">
-                        {pest.image && (
+                        {pest.mainImageExternalUrl ? (
+                            <Image
+                                src={pest.mainImageExternalUrl}
+                                alt={pest.commonName}
+                                fill
+                                className="object-cover"
+                            />
+                        ) : pest.image && (
                             <Image
                                 src={urlFor(pest.image).width(300).height(300).url()}
                                 alt={pest.commonName}
@@ -118,11 +129,11 @@ export default async function PestPage(props: { params: Promise<{ slug: string }
                         <div className="bg-slate-900 text-white rounded-xl shadow-lg p-8">
                             <div className="flex items-center gap-3 mb-6">
                                 <Shield className="w-6 h-6 text-gold" />
-                                <h2 className="text-xl font-bold">Prevention & Control</h2>
+                                <h2 className="text-xl font-bold text-white">Prevention & Control</h2>
                             </div>
                             {pest.prevention ? (
                                 <div className="prose prose-invert prose-sm max-w-none">
-                                    <CustomPortableText value={pest.prevention} />
+                                    <CustomPortableText value={pest.prevention} isDark={true} />
                                 </div>
                             ) : (
                                 <p className="text-slate-400 text-sm">No specific prevention tips listed. Contact a professional immediately.</p>

@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  /* Premium Palette */
+  --color-eco-green: #1A3C34;
+  /* Deep Forest Green */
+  --color-gold: #E07A5F;
+  /* Burnt Terracotta / Copper */
+  --color-surface-light: #F7F9F9;
+  /* Porcelain Off-White */
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+}
+
+body {
+  background: white;
+  color: black;
+}

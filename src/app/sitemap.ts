@@ -3,7 +3,7 @@ import { client } from '@/sanity/lib/client'
 import { POSTS_QUERY, PESTS_QUERY, SERVICE_AREAS_QUERY } from '@/sanity/lib/queries'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = 'http://localhost:3000' // In production, this would be your actual domain
+    const baseUrl = 'https://pestcontrolnoida.in'
 
     // Fetch all dynamic routes
     const posts = await client.fetch(POSTS_QUERY)

@@ -16,14 +16,14 @@ export default async function Home() {
     <div className="min-h-screen bg-[#F7F9F9]">
 
       {/* Hero Section - Gradient & Texture */}
-      <div className="relative bg-gradient-to-br from-slate-900 to-eco-green text-white py-32 px-4 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-slate-900 to-eco-green text-white pt-12 pb-20 md:py-32 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] animate-pulse"></div>
         <div className="container mx-auto max-w-6xl text-center relative z-10">
           <span className="text-gold font-bold tracking-widest uppercase text-sm mb-6 block">Professional Pest Control Services</span>
           <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight">
             Protecting Your Home <br className="hidden md:block" /> From Unwanted Guests
           </h1>
-          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+          <p className="text-2xl md:text-2xl text-white/80 max-w-3xl mx-auto font-light leading-relaxed mb-10">
             Safe, effective, and eco-friendly pest control solutions for Noida and NCR.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -38,7 +38,7 @@ export default async function Home() {
       </div>
 
       {/* 2. Service Cards - Minimalist, overlapping */}
-      <div className="container mx-auto px-4 -mt-20 relative z-20 mb-32">
+      <div className="container mx-auto px-4 mt-6 md:mt-12 relative z-20 mb-8 md:mb-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100">
             <div className="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center text-eco-green mb-8">
@@ -70,8 +70,8 @@ export default async function Home() {
       </div>
 
       {/* 3. Article Grid (Modern list) */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+      <div className="container mx-auto px-4 py-8 md:py-16">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
           <div>
             <span className="text-gold font-bold tracking-widest uppercase text-xs mb-2 block">Knowledge Base</span>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900">Latest Insights</h2>

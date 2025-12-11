@@ -44,7 +44,7 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
     return (
         <article className="min-h-screen pb-20">
             {/* Header/Hero */}
-            <div className="bg-slate-900 text-white relative py-20 px-4">
+            <div className="bg-slate-900 text-white relative py-20 px-3">
                 <div className="absolute inset-0 overflow-hidden opacity-30">
                     {post.mainImage && (
                         <Image
@@ -78,11 +78,11 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
             </div>
 
             {/* Content */}
-            <div className="container mx-auto px-4 max-w-7xl -mt-10 relative z-20">
+            <div className="container mx-auto px-3 max-w-[1440px] -mt-10 relative z-20">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     {/* Main Article Content */}
                     <div className="lg:col-span-2">
-                        <div className="bg-white rounded-xl shadow-xl p-8 md:p-12 overflow-hidden">
+                        <div className="bg-white rounded-xl shadow-xl p-4 md:p-12 overflow-hidden">
                             {post.mainImage && (
                                 <div className="mb-10 rounded-lg overflow-hidden shadow-sm">
                                     <Image

@@ -50,6 +50,10 @@ export default defineType({
                                 title: 'URL',
                                 name: 'href',
                                 type: 'url',
+                                validation: (Rule) => Rule.uri({
+                                    scheme: ['http', 'https', 'mailto', 'tel'],
+                                    allowRelative: true
+                                }),
                             },
                         ],
                     },
@@ -62,6 +66,30 @@ export default defineType({
         defineArrayMember({
             type: 'image',
             options: { hotspot: true },
+        }),
+        defineArrayMember({
+            type: 'object',
+            name: 'htmlEmbed',
+            title: 'Raw HTML / Embed',
+            fields: [
+                {
+                    name: 'code',
+                    type: 'text',
+                    title: 'HTML Code',
+                    description: 'Paste raw HTML here (e.g. tables, iframes, scripts).',
+                }
+            ],
+            preview: {
+                select: {
+                    code: 'code'
+                },
+                prepare({ code }) {
+                    return {
+                        title: 'Raw HTML Embed',
+                        subtitle: code ? `${code.substring(0, 30)}...` : 'Empty'
+                    }
+                }
+            }
         }),
     ],
 })

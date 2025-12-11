@@ -60,8 +60,12 @@ ${description}
 
         return NextResponse.json({ success: true, message: 'Email sent successfully' });
 
-    } catch (error) {
+    } catch (error: any) {
         console.error('Email Error:', error);
-        return NextResponse.json({ success: false, message: 'Failed to send email' }, { status: 500 });
+        return NextResponse.json({
+            success: false,
+            message: 'Failed to send email',
+            error: error.message || 'Unknown error'
+        }, { status: 500 });
     }
 }

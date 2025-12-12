@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import { Shield, Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Shield, Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 
 export default function Footer() {
     return (
-        <footer className="bg-eco-green text-white pt-20 pb-10 border-t border-white/10">
-            <div className="container mx-auto px-6">
+        <footer className="relative bg-gradient-to-br from-slate-900 to-eco-green text-white pt-20 pb-10 border-t border-white/10 overflow-hidden">
+            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] animate-pulse"></div>
+            <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
                     {/* Brand Section */}
@@ -22,13 +23,13 @@ export default function Footer() {
                             Premium pest control services for modern living. Safe, effective, and trusted by thousands of homeowners in NCR.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold transition-colors text-white">
+                            <a href="https://share.google/zw1VMrRn1UR2Rmp7s" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold transition-colors text-white" aria-label="Google Business Profile">
+                                <MapPin className="w-4 h-4" />
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61558108401437" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold transition-colors text-white" aria-label="Facebook">
                                 <Facebook className="w-4 h-4" />
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold transition-colors text-white">
-                                <Twitter className="w-4 h-4" />
-                            </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold transition-colors text-white">
+                            <a href="https://www.instagram.com/lexhygiene2020/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold transition-colors text-white" aria-label="Instagram">
                                 <Instagram className="w-4 h-4" />
                             </a>
                         </div>

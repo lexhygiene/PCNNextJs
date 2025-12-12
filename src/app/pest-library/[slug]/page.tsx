@@ -153,6 +153,24 @@ export default async function PestPage(props: { params: Promise<{ slug: string }
                     </div>
                 </div>
             </div>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'Article',
+                        headline: pest.commonName,
+                        description: pest.seoDescription || `Complete guide to identifying and controlling ${pest.commonName}.`,
+                        image: pest.mainImageExternalUrl ? [pest.mainImageExternalUrl] : (pest.image ? [urlFor(pest.image).url()] : []),
+                        author: {
+                            '@type': 'Organization',
+                            name: 'Pest Control Noida'
+                        },
+                        datePublished: pest._createdAt,
+                        dateModified: pest._updatedAt,
+                    })
+                }}
+            />
         </div>
     );
 }

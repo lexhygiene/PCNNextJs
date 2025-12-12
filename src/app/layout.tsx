@@ -25,11 +25,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://www.transparenttextures.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Pest Control Noida',
+              url: 'https://pestcontrolnoida.in',
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+91 8882333782',
+                contactType: 'customer service',
+              },
+            }),
+          }}
+        />
+      </head>
       <body className={`${inter.variable} ${montserrat.variable} font-sans flex flex-col min-h-screen`}>
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DHRGFJQLK6"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
@@ -44,7 +63,7 @@ export default function RootLayout({
         {/* Google Ads */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17787304856"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script id="google-ads" strategy="afterInteractive">
           {`

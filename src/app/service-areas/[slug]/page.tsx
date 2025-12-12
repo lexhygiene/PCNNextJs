@@ -186,16 +186,8 @@ export default async function ServiceAreaPage(props: { params: Promise<{ slug: s
                                 <h3 className="text-xl font-bold text-slate-900 mb-4">Contact {area.locationName} Branch</h3>
                                 <div className="space-y-3 text-sm text-slate-600">
                                     <div className="flex justify-between border-b border-gray-100 pb-2">
-                                        <span>Mon - Fri</span>
-                                        <span className="font-bold text-slate-900">8:00 AM - 6:00 PM</span>
-                                    </div>
-                                    <div className="flex justify-between border-b border-gray-100 pb-2">
-                                        <span>Saturday</span>
-                                        <span className="font-bold text-slate-900">9:00 AM - 4:00 PM</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                        <span>Sunday</span>
-                                        <span className="font-bold text-red-500">Emergency Only</span>
+                                        <span>Mon - Sun</span>
+                                        <span className="font-bold text-slate-900">8:00 AM - 8:00 PM</span>
                                     </div>
                                 </div>
                             </div>
@@ -204,6 +196,26 @@ export default async function ServiceAreaPage(props: { params: Promise<{ slug: s
 
                 </div>
             </div>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'Service',
+                        name: `Pest Control in ${area.locationName}`,
+                        serviceType: 'Pest Control',
+                        provider: {
+                            '@type': 'Organization',
+                            name: 'Pest Control Noida'
+                        },
+                        areaServed: {
+                            '@type': 'Place',
+                            name: area.locationName
+                        },
+                        description: area.seoDescription || `Professional pest control services in ${area.locationName}.`,
+                    })
+                }}
+            />
         </div>
     );
 }

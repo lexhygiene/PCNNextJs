@@ -38,6 +38,8 @@ export const PESTS_QUERY = groq`*[_type == "pest"] | order(commonName asc) {
 
 export const PEST_QUERY = groq`*[_type == "pest" && slug.current == $slug][0] {
     _id,
+    _createdAt,
+    _updatedAt,
     commonName,
     scientificName,
     slug,
@@ -66,6 +68,8 @@ export const SERVICE_AREAS_QUERY = groq`*[_type == "serviceArea" && defined(slug
 
 export const SERVICE_AREA_QUERY = groq`*[_type == "serviceArea" && slug.current == $slug][0] {
     _id,
+    _createdAt,
+    _updatedAt,
     locationName,
     slug,
     seoTitle,

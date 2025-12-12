@@ -50,16 +50,16 @@ export default async function Home() {
             <div className="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center text-eco-green mb-8">
               <ShieldCheck className="w-7 h-7" />
             </div>
-            <h3 className="text-2xl font-sans font-bold text-slate-800 mb-4">Termite Control in Noida</h3>
+            <h2 className="text-2xl font-sans font-bold text-slate-800 mb-4">Termite Control in Noida</h2>
             <p className="text-slate-500 mb-8 leading-relaxed">Protect your property investment with our advanced, odor-free drill-fill-seal termite treatment in Noida.</p>
-            <Link href="/pest-library" className="text-eco-green font-bold text-sm tracking-wide uppercase hover:opacity-80">Learn More</Link>
+            <Link href="/pest-library" className="text-eco-green font-bold text-sm tracking-wide uppercase hover:opacity-80">Learn More About Termite Control</Link>
           </div>
 
           <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 relative top-0 md:-top-4">
             <div className="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center text-gold mb-8">
               <Bug className="w-7 h-7" />
             </div>
-            <h3 className="text-2xl font-sans font-bold text-slate-800 mb-4">General Pest Control</h3>
+            <h2 className="text-2xl font-sans font-bold text-slate-800 mb-4">General Pest Control</h2>
             <p className="text-slate-500 mb-8 leading-relaxed">Complete sanitization against cockroaches, ants, and mosquitoes for a healthier home in Noida.</p>
             <Link href="/pest-library" className="text-gold font-bold text-sm tracking-wide uppercase hover:opacity-80">View All Pests</Link>
           </div>
@@ -68,7 +68,7 @@ export default async function Home() {
             <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center text-slate-600 mb-8">
               <Leaf className="w-7 h-7" />
             </div>
-            <h3 className="text-2xl font-sans font-bold text-slate-800 mb-4">Eco-Safe Protocol</h3>
+            <h2 className="text-2xl font-sans font-bold text-slate-800 mb-4">Eco-Safe Protocol</h2>
             <p className="text-slate-500 mb-8 leading-relaxed">We prioritize your health using government-approved, low-toxicity chemicals safe for pests.</p>
             <Link href="/articles" className="text-slate-600 font-bold text-sm tracking-wide uppercase hover:opacity-80">Read Our Safety Policy</Link>
           </div>
@@ -143,7 +143,7 @@ export default async function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+918882333782" className="bg-gold hover:bg-orange-600 text-white font-bold py-4 px-12 rounded-full transition-all text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
-              Call Now: +91 8882333782
+              Call Now
             </a>
             <Link href="/contact" className="bg-transparent border-2 border-slate-700 hover:border-white text-white font-bold py-4 px-12 rounded-full transition-all text-lg">
               Book Online

@@ -33,7 +33,7 @@ const getComponents = (isDark: boolean): PortableTextComponents => ({
         },
         htmlEmbed: ({ value }) => {
             if (!value?.code) return null;
-            return <div dangerouslySetInnerHTML={{ __html: value.code }} className="my-8 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6 [&_li]:mb-2 [&_h1]:text-4xl [&_h1]:font-serif [&_h1]:font-bold [&_h1]:mt-8 [&_h1]:mb-4 [&_h1]:text-slate-900 [&_h2]:text-3xl [&_h2]:font-serif [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-4 [&_h2]:text-eco-green [&_h2]:border-b [&_h2]:border-gray-200 [&_h2]:pb-2 [&_h3]:text-2xl [&_h3]:font-serif [&_h3]:font-bold [&_h3]:mt-6 [&_h3]:mb-3 [&_h3]:text-slate-800 [&_h4]:text-xl [&_h4]:font-bold [&_h4]:mt-4 [&_h4]:mb-2 [&_h4]:text-gold" />
+            return <div dangerouslySetInnerHTML={{ __html: value.code }} className="my-8 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:marker:text-gold [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:marker:text-gold [&_li]:mb-2 [&_h1]:text-4xl [&_h1]:font-serif [&_h1]:font-bold [&_h1]:mt-8 [&_h1]:mb-4 [&_h1]:text-slate-900 [&_h2]:text-3xl [&_h2]:font-serif [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-4 [&_h2]:text-eco-green [&_h2]:border-b [&_h2]:border-gray-200 [&_h2]:pb-2 [&_h3]:text-2xl [&_h3]:font-serif [&_h3]:font-bold [&_h3]:mt-6 [&_h3]:mb-3 [&_h3]:text-slate-800 [&_h4]:text-xl [&_h4]:font-bold [&_h4]:mt-4 [&_h4]:mb-2 [&_h4]:text-gold" />
         },
         externalImage: ({ value }) => {
             if (!value?.url) return null;

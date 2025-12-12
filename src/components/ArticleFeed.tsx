@@ -57,13 +57,13 @@ export default function ArticleFeed({ posts }: ArticleFeedProps) {
 
                     <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl border border-slate-100 group">
                         <div
-                            className="flex transition-transform duration-700 ease-in-out h-[500px]"
+                            className="flex transition-transform duration-700 ease-in-out h-[600px] md:h-[500px]"
                             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                         >
                             {featuredPosts.map((post) => (
                                 <div key={post._id} className="min-w-full relative h-full flex flex-col md:flex-row">
                                     {/* Image Side (60%) */}
-                                    <div className="w-full md:w-3/5 relative h-64 md:h-full overflow-hidden">
+                                    <div className="w-full md:w-3/5 relative h-48 md:h-full overflow-hidden shrink-0">
                                         {post.mainImageExternalUrl ? (
                                             /* eslint-disable-next-line @next/next/no-img-element */
                                             <img
@@ -88,20 +88,20 @@ export default function ArticleFeed({ posts }: ArticleFeedProps) {
                                     </div>
 
                                     {/* Content Side (40%) */}
-                                    <div className="w-full md:w-2/5 p-8 md:p-12 flex flex-col justify-center bg-white relative z-10">
+                                    <div className="w-full md:w-2/5 p-6 pb-16 md:p-12 flex flex-col justify-center bg-white relative z-10">
                                         <div className="mb-4">
                                             {post.categories && (
                                                 <span className="text-gold font-bold text-xs uppercase tracking-wider mb-2 block">
                                                     {post.categories[0]}
                                                 </span>
                                             )}
-                                            <h2 className="text-3xl font-serif font-bold text-slate-900 leading-tight mb-4">
+                                            <h2 className="text-2xl md:text-3xl font-serif font-bold text-slate-900 leading-tight mb-4">
                                                 <Link href={`/articles/${post.slug.current}`} className="hover:text-eco-green transition-colors">
                                                     {post.title}
                                                 </Link>
                                             </h2>
                                             {post.seoDescription && (
-                                                <p className="text-slate-500 line-clamp-3 mb-8 text-lg font-light">
+                                                <p className="text-slate-500 line-clamp-2 md:line-clamp-3 mb-6 md:mb-8 text-base md:text-lg font-light">
                                                     {post.seoDescription}
                                                 </p>
                                             )}

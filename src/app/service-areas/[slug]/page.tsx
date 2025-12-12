@@ -25,8 +25,12 @@ export async function generateMetadata(
     }
 
     return {
-        title: `Pest Control Services in ${area.locationName} | Local Experts`,
+        title: area.seoTitle || `Pest Control Services in ${area.locationName} | Local Experts`,
         description: area.seoDescription || `Professional pest control services in ${area.locationName}. Same-day inspections and eco-friendly solutions.`,
+        openGraph: {
+            title: area.seoTitle || `Pest Control Services in ${area.locationName} | Local Experts`,
+            description: area.seoDescription || `Professional pest control services in ${area.locationName}. Same-day inspections and eco-friendly solutions.`,
+        }
     };
 }
 
@@ -61,7 +65,7 @@ export default async function ServiceAreaPage(props: { params: Promise<{ slug: s
                         {area.seoDescription || `Top-rated residential and commercial pest control services in ${area.locationName}. We protect your home from local pests with eco-friendly solutions.`}
                     </p>
                     <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:+918882333782" className="bg-gold hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full transition-colors flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
+                        <a href="tel:+918882333782" className="bg-gold hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition-colors flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
                             <Phone className="w-5 h-5" />
                             <span>Call {area.locationName} Branch</span>
                         </a>

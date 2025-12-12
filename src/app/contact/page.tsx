@@ -32,7 +32,7 @@ export default function ContactPage() {
                                 <Phone className="w-6 h-6" />
                             </div>
                             <h3 className="font-sans font-bold text-slate-900 mb-1 text-lg">Phone Number</h3>
-                            <p className="text-sm text-slate-500 mb-3">24/7 Support Line</p>
+                            <p className="text-sm text-slate-500 mb-3">Mon - Sat: 8am - 8pm<br />Sun: Emergency Only</p>
                             <a href="tel:+918882333782" className="text-lg text-slate-900 font-bold hover:text-gold transition-colors flex items-center gap-2">
                                 +91 8882333782
                                 <ArrowRight className="w-4 h-4 text-gold opacity-0 group-hover:opacity-100 transition-opacity" />

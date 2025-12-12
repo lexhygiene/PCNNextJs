@@ -26,9 +26,11 @@ export async function generateMetadata(
     }
 
     return {
-        title: `${pest.commonName} Control & Identification | Pest Library`,
-        description: `Learn how to identify and get rid of ${pest.commonName} (${pest.scientificName}). Expert advice on behavior, habitat, and prevention.`,
+        title: pest.seoTitle || `${pest.commonName} Control & Identification | Pest Library`,
+        description: pest.seoDescription || `Learn how to identify and get rid of ${pest.commonName} (${pest.scientificName}). Expert advice on behavior, habitat, and prevention.`,
         openGraph: {
+            title: pest.seoTitle || `${pest.commonName} Control & Identification | Pest Library`,
+            description: pest.seoDescription || `Learn how to identify and get rid of ${pest.commonName} (${pest.scientificName}). Expert advice on behavior, habitat, and prevention.`,
             images: pest.mainImageExternalUrl
                 ? [pest.mainImageExternalUrl]
                 : pest.image
@@ -119,6 +121,20 @@ export default async function PestPage(props: { params: Promise<{ slug: string }
                             </div>
                         </div>
                     )}
+
+                    <div className="bg-slate-900 text-white rounded-xl shadow-lg p-8">
+                        <div className="flex items-center gap-3 mb-6">
+                            <Shield className="w-6 h-6 text-gold" />
+                            <h2 className="text-2xl font-serif font-bold text-white">Prevention & Control</h2>
+                        </div>
+                        {pest.prevention ? (
+                            <div className="prose prose-invert prose-lg max-w-none">
+                                <CustomPortableText value={pest.prevention} isDark={true} />
+                            </div>
+                        ) : (
+                            <p className="text-slate-400">No specific prevention tips listed. Contact a professional immediately.</p>
+                        )}
+                    </div>
                 </div>
 
                 {/* Sidebar / Prevention */}
@@ -126,19 +142,7 @@ export default async function PestPage(props: { params: Promise<{ slug: string }
                     <div className="sticky top-24 space-y-6">
                         <QuoteForm />
 
-                        <div className="bg-slate-900 text-white rounded-xl shadow-lg p-8">
-                            <div className="flex items-center gap-3 mb-6">
-                                <Shield className="w-6 h-6 text-gold" />
-                                <h2 className="text-xl font-bold text-white">Prevention & Control</h2>
-                            </div>
-                            {pest.prevention ? (
-                                <div className="prose prose-invert prose-sm max-w-none">
-                                    <CustomPortableText value={pest.prevention} isDark={true} />
-                                </div>
-                            ) : (
-                                <p className="text-slate-400 text-sm">No specific prevention tips listed. Contact a professional immediately.</p>
-                            )}
-                        </div>
+
 
                         <div className="bg-white rounded-xl shadow-sm p-6 text-center border border-gray-100">
                             <p className="text-sm text-slate-500 mb-2">Not what you were looking for?</p>

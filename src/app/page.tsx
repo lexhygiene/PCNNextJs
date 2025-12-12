@@ -8,6 +8,11 @@ import { ShieldCheck, Bug, Leaf, Search, Sparkles } from "lucide-react";
 // Revalidate every 60 seconds
 export const revalidate = 60;
 
+export const metadata = {
+  title: 'Pest Control Noida & NCR | Expert Termite & Pest Removal',
+  description: 'Government-approved, eco-friendly pest control in Noida. Specializing in termite treatment, cockroach control, and rodent defense. Call for a free quote.',
+};
+
 export default async function Home() {
   // Fetch posts from Sanity
   const posts = await client.fetch(POSTS_QUERY);
@@ -28,7 +33,7 @@ export default async function Home() {
             Government-approved, eco-friendly <strong>Pest Control in Noida</strong>. We specialize in <strong>Termite Control in Noida</strong>, cockroach removal, and rodent defense.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-gold hover:bg-yellow-600 text-white font-bold py-4 px-10 rounded-full transition-all text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
+            <Link href="/contact" className="bg-gold hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-full transition-all text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
               Get a Free Quote
             </Link>
             <Link href="/pest-library" className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-10 rounded-full transition-all text-lg backdrop-blur-sm border border-white/20">
@@ -137,7 +142,7 @@ export default async function Home() {
             Book a comprehensive inspection today and get a custom treatment plan for your home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+918882333782" className="bg-gold hover:bg-yellow-600 text-white font-bold py-4 px-12 rounded-full transition-all text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
+            <a href="tel:+918882333782" className="bg-gold hover:bg-orange-600 text-white font-bold py-4 px-12 rounded-full transition-all text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
               Call Now: +91 8882333782
             </a>
             <Link href="/contact" className="bg-transparent border-2 border-slate-700 hover:border-white text-white font-bold py-4 px-12 rounded-full transition-all text-lg">

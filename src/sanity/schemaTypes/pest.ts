@@ -77,6 +77,18 @@ export default defineType({
             name: 'prevention',
             title: 'Prevention Tips',
             type: 'blockContent',
+        }),
+        defineField({
+            name: 'seoTitle',
+            title: 'SEO Title',
+            type: 'string',
+            description: 'Custom title for browser tab and search engines (overrides default)',
+        }),
+        defineField({
+            name: 'seoDescription',
+            title: 'SEO Description',
+            type: 'text',
+            description: 'Custom meta description for search engines (overrides default)',
         })
     ],
 })

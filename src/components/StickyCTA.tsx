@@ -29,7 +29,7 @@ export default function StickyCTA() {
                         href="https://wa.me/918882333784"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-4 py-2.5 rounded-full font-bold text-sm transition-colors shadow-sm"
+                        className="flex items-center gap-2 bg-gold hover:bg-orange-600 text-white px-4 py-2.5 rounded-full font-bold text-sm transition-colors shadow-sm"
                     >
                         <MessageCircle className="w-4 h-4" />
                         <span>WhatsApp</span>

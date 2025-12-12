@@ -27,8 +27,6 @@ export async function generateMetadata(
     return {
         title: post.seoTitle || post.title,
         description: post.seoDescription || `Read more about ${post.title}`,
-        title: post.seoTitle || post.title,
-        description: post.seoDescription || `Read more about ${post.title}`,
         openGraph: {
             images: post.mainImageExternalUrl
                 ? [post.mainImageExternalUrl]

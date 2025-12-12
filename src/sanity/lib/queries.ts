@@ -47,13 +47,16 @@ export const PEST_QUERY = groq`*[_type == "pest" && slug.current == $slug][0] {
     seasonalActivity,
     behavior,
     habitat,
-    prevention
+    prevention,
+    seoTitle,
+    seoDescription
 }`;
 
-export const SERVICE_AREAS_QUERY = groq`*[_type == "serviceArea" && defined(slug.current)] | order(locationName asc) {
+export const SERVICE_AREAS_QUERY = groq`*[_type == "serviceArea" && defined(slug.current)] | order(coalesce(orderRank, 100) asc, locationName asc) {
     _id,
     locationName,
     slug,
+    orderRank,
     seoDescription,
     parent->{
         _id,
@@ -65,6 +68,7 @@ export const SERVICE_AREA_QUERY = groq`*[_type == "serviceArea" && slug.current 
     _id,
     locationName,
     slug,
+    seoTitle,
     seoDescription,
     parent->{
         _id,

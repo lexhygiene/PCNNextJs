@@ -27,10 +27,23 @@ export default defineType({
             description: 'Select the parent region if this is a sub-area (e.g., Select "Noida" for "Noida Sector 18").'
         }),
         defineField({
+            name: 'seoTitle',
+            title: 'SEO Title',
+            type: 'string',
+            description: 'Custom title for browser tab and search engines (overrides default)',
+        }),
+        defineField({
             name: 'seoDescription',
             title: 'SEO Description',
             type: 'text',
             description: 'Localized description for this specific area page.'
+        }),
+        defineField({
+            name: 'orderRank',
+            title: 'Order Rank',
+            type: 'number',
+            description: 'Used to sort the service areas (e.g. 1 for Noida, 2 for Greater Noida, 3 for Ghaziabad). Lower numbers appear first.',
+            initialValue: 100
         }),
         defineField({
             name: 'commonPests',

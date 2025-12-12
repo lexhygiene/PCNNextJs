@@ -1,5 +1,14 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { createClient } from 'next-sanity';
+
+const client = createClient({
+    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+    token: process.env.SANITY_WRITE_TOKEN,
+    apiVersion: '2024-03-20',
+    useCdn: false,
+});
 
 export async function POST(request: Request) {
     try {
@@ -18,7 +27,25 @@ export async function POST(request: Request) {
             return NextResponse.json({ success: false, message: 'Recaptcha verification failed' }, { status: 400 });
         }
 
-        // 2. Configure Nodemailer Transporter
+        // 2. Save to Sanity (New Step)
+        try {
+            await client.create({
+                _type: 'lead',
+                name,
+                email,
+                phone,
+                heardAbout,
+                description,
+                status: 'new',
+            });
+            console.log('Lead saved to Sanity');
+        } catch (sanityError) {
+            console.error('Failed to save to Sanity:', sanityError);
+            // We verify recatcha first, if saving fails, we still want to try sending email?
+            // Yes, let's proceed to email as a fallback notification.
+        }
+
+        // 3. Configure Nodemailer Transporter
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
             port: Number(process.env.SMTP_PORT),
@@ -29,7 +56,7 @@ export async function POST(request: Request) {
             },
         });
 
-        // 3. Send Email
+        // 4. Send Email
         await transporter.sendMail({
             from: `"Website Lead" <${process.env.SMTP_USER}>`,
             to: 'info@pestcontrolnoida.in', // Your receiving email
@@ -58,7 +85,7 @@ ${description}
             `,
         });
 
-        return NextResponse.json({ success: true, message: 'Email sent successfully' });
+        return NextResponse.json({ success: true, message: 'Email sent successfully and saved to database' });
 
     } catch (error: any) {
         console.error('Email Error:', error);

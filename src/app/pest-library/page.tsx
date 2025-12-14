@@ -4,7 +4,8 @@ import PestFeed from "@/components/PestFeed";
 import QuoteForm from "@/components/QuoteForm";
 
 // Revalidate every 60 seconds
-export const revalidate = 60;
+// Revalidate every 24 hours (86400 seconds)
+export const revalidate = 86400;
 
 export const metadata = {
     title: 'Identify Pests in Noida | Pest Control Noida Library',

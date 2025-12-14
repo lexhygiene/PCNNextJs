@@ -76,7 +76,7 @@ export default function PestFeed({ pests }: PestFeedProps) {
                                     <div className="relative w-full h-full">
                                         <Image
                                             src={pest.mainImageExternalUrl}
-                                            alt={pest.commonName}
+                                            alt={pest.mainImageExternalAlt || pest.commonName}
                                             fill
                                             className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                                         />

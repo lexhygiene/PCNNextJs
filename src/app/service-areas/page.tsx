@@ -3,7 +3,8 @@ import { SERVICE_AREAS_QUERY } from "@/sanity/lib/queries";
 import ServiceAreaFeed from "@/components/ServiceAreaFeed";
 import QuoteForm from "@/components/QuoteForm";
 
-export const revalidate = 60;
+// Revalidate every 24 hours (86400 seconds)
+export const revalidate = 86400;
 
 export const metadata = {
     title: 'Service Areas | Pest Control Noida & NCR',

@@ -72,7 +72,7 @@ export default function QuoteForm() {
     return (
         <div className="bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
             <h3 className="text-2xl font-sans font-bold text-slate-900 mb-2">Get a Free Quote</h3>
-            <p className="text-slate-500 mb-8 text-sm">Find out if you are eligible for energy grants or get a quote for improvements.</p>
+            <p className="text-slate-500 mb-8 text-sm">Fill out the form below to request a free inspection or get a quote for our services.</p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
 

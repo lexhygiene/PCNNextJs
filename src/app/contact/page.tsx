@@ -1,8 +1,9 @@
 import { Mail, Phone, MapPin, Clock, ArrowRight } from 'lucide-react';
 import QuoteForm from '@/components/QuoteForm';
+import GoogleReviewWidget from '@/components/GoogleReviewWidget';
 
 export const metadata = {
-    title: 'Contact Us | The Green Shield',
+    title: 'Contact Us | Pest Control Noida - a Unit of Lex Hygiene India',
     description: 'Get in touch with our expert team for pest control advice and services.',
 };
 
@@ -41,6 +42,8 @@ export default function ContactPage() {
                             </div>
                         </div>
 
+                        <GoogleReviewWidget />
+
                         {/* Email Card */}
                         <div className="bg-white p-5 md:p-8 rounded-2xl shadow-sm border border-slate-100 group hover:shadow-md transition-all flex flex-row-reverse items-start gap-4 md:gap-6">
                             <div className="w-10 h-10 md:w-12 md:h-12 bg-orange-50 rounded-xl flex items-center justify-center text-gold shrink-0 group-hover:bg-gold group-hover:text-white transition-colors">
@@ -49,8 +52,8 @@ export default function ContactPage() {
                             <div className="flex-1 min-w-0 text-left">
                                 <h3 className="font-sans font-bold text-slate-900 mb-1 text-lg">Email Address</h3>
                                 <p className="text-sm text-slate-500 mb-2 md:mb-3">For general inquiries</p>
-                                <a href="mailto:info@pestcontrolnoida.com" className="text-base md:text-lg text-slate-900 font-bold hover:text-gold transition-colors break-words">
-                                    info@pestcontrolnoida.com
+                                <a href="mailto:info@pestcontrolnoida.in" className="text-base md:text-lg text-slate-900 font-bold hover:text-gold transition-colors break-words">
+                                    info@pestcontrolnoida.in
                                 </a>
                             </div>
                         </div>

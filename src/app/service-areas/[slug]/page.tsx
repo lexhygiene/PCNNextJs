@@ -10,7 +10,8 @@ import QuoteForm from "@/components/QuoteForm";
 import { Metadata } from "next";
 
 // Revalidate every 60 seconds
-export const revalidate = 60;
+// Revalidate every 24 hours (86400 seconds)
+export const revalidate = 86400;
 
 export async function generateMetadata(
     props: { params: Promise<{ slug: string }> }

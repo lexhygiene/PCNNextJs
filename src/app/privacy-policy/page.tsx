@@ -59,7 +59,7 @@ export default function PrivacyPolicyPage() {
                         <strong>Pest Control Noida</strong><br />
                         Logix City Centre, Noida<br />
                         Uttar Pradesh, India<br />
-                        Email: <Link href="mailto:info@pestcontrolnoida.com">info@pestcontrolnoida.com</Link><br />
+                        Email: <Link href="mailto:info@pestcontrolnoida.in">info@pestcontrolnoida.in</Link><br />
                         Phone: <Link href="tel:+918882333782">+91 8882333782</Link>
                     </p>
                 </div>

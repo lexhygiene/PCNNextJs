@@ -42,6 +42,13 @@ export default defineType({
             validation: (Rule) => Rule.uri({ scheme: ['http', 'https'] })
         }),
         defineField({
+            name: 'mainImageExternalAlt',
+            title: 'External Image Alt Text',
+            type: 'string',
+            description: 'Alt text for the external image. Important for SEO. Defaults to post title if left empty.',
+            hidden: ({ document }) => !document?.mainImageExternalUrl
+        }),
+        defineField({
             name: 'categories',
             title: 'Categories',
             type: 'array',
@@ -77,7 +84,14 @@ export default defineType({
             type: 'boolean',
             initialValue: false,
             description: 'Toggle ON to pin this post to the top of the list.'
-        })
+        }),
+        defineField({
+            name: 'canonicalUrl',
+            title: 'Canonical URL',
+            type: 'url',
+            description: 'The preferred URL for this content. Use this if the content was originally published elsewhere (e.g. Medium, LinkedIn) to prevent duplicate content issues.',
+            validation: (Rule) => Rule.uri({ scheme: ['http', 'https'] })
+        }),
     ],
 
     preview: {

@@ -4,9 +4,11 @@ import { client } from "@/sanity/lib/client";
 import { POSTS_QUERY } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 import { ShieldCheck, Bug, Leaf, Search, Sparkles } from "lucide-react";
+import MagazineSection from "@/components/MagazineSection";
 
 // Revalidate every 60 seconds
-export const revalidate = 60;
+// Revalidate every 24 hours (86400 seconds)
+export const revalidate = 86400;
 
 export const metadata = {
   title: 'Pest Control Noida & NCR | Expert Termite & Pest Removal',
@@ -16,7 +18,7 @@ export const metadata = {
 export default async function Home() {
   // Fetch posts from Sanity
   const posts = await client.fetch(POSTS_QUERY);
-  console.log('Sanity Posts Data:', JSON.stringify(posts, null, 2));
+
 
   return (
     <div className="min-h-screen bg-[#F7F9F9]">
@@ -43,96 +45,122 @@ export default async function Home() {
         </div>
       </div>
 
-      {/* 2. Service Cards - Minimalist, overlapping */}
-      <div className="container mx-auto px-4 mt-6 md:mt-12 relative z-20 mb-8 md:mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100">
-            <div className="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center text-eco-green mb-8">
-              <ShieldCheck className="w-7 h-7" />
-            </div>
-            <h2 className="text-2xl font-sans font-bold text-slate-800 mb-4">Termite Control in Noida</h2>
-            <p className="text-slate-500 mb-8 leading-relaxed">Protect your property investment with our advanced, odor-free drill-fill-seal termite treatment in Noida.</p>
-            <Link href="/pest-library" className="text-eco-green font-bold text-sm tracking-wide uppercase hover:opacity-80">Learn More About Termite Control</Link>
-          </div>
+      <MagazineSection posts={posts} />
 
-          <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 relative top-0 md:-top-4">
-            <div className="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center text-gold mb-8">
-              <Bug className="w-7 h-7" />
-            </div>
-            <h2 className="text-2xl font-sans font-bold text-slate-800 mb-4">General Pest Control</h2>
-            <p className="text-slate-500 mb-8 leading-relaxed">Complete sanitization against cockroaches, ants, and mosquitoes for a healthier home in Noida.</p>
-            <Link href="/pest-library" className="text-gold font-bold text-sm tracking-wide uppercase hover:opacity-80">View All Pests</Link>
-          </div>
+      {/* 2.5 How It Works - Process Steps */}
+      <div className="bg-white py-16 md:py-24 border-y border-slate-100">
+        <div className="container mx-auto px-4 text-center">
+          <span className="text-gold font-bold tracking-widest uppercase text-xs mb-4 block">Simple Process</span>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-12">How We Protect Your Home</h2>
 
-          <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100">
-            <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center text-slate-600 mb-8">
-              <Leaf className="w-7 h-7" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
+            {/* Connecting Line (Desktop) */}
+            <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-slate-100 -z-10"></div>
+
+            <div className="relative group">
+              <div className="w-24 h-24 bg-white border-2 border-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:border-eco-green group-hover:scale-110 transition-all duration-300">
+                <Search className="w-10 h-10 text-slate-400 group-hover:text-eco-green transition-colors" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">1. Inspection</h3>
+              <p className="text-slate-500 leading-relaxed px-4">We conduct a thorough survey to identify the pest species and infestation level.</p>
             </div>
-            <h2 className="text-2xl font-sans font-bold text-slate-800 mb-4">Eco-Safe Protocol</h2>
-            <p className="text-slate-500 mb-8 leading-relaxed">We prioritize your health using government-approved, low-toxicity chemicals safe for pests.</p>
-            <Link href="/articles" className="text-slate-600 font-bold text-sm tracking-wide uppercase hover:opacity-80">Read Our Safety Policy</Link>
+
+            <div className="relative group">
+              <div className="w-24 h-24 bg-white border-2 border-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:border-gold group-hover:scale-110 transition-all duration-300">
+                <Bug className="w-10 h-10 text-slate-400 group-hover:text-gold transition-colors" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">2. Treatment</h3>
+              <p className="text-slate-500 leading-relaxed px-4">Our experts apply eco-friendly, government-approved chemical treatments.</p>
+            </div>
+
+            <div className="relative group">
+              <div className="w-24 h-24 bg-white border-2 border-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:border-blue-400 group-hover:scale-110 transition-all duration-300">
+                <ShieldCheck className="w-10 h-10 text-slate-400 group-hover:text-blue-400 transition-colors" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">3. Prevention</h3>
+              <p className="text-slate-500 leading-relaxed px-4">We seal entry points and provide tips to prevent future pest problems.</p>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* 3. Article Grid (Modern list) */}
-      <div className="container mx-auto px-4 py-8 md:py-16">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
-          <div>
-            <span className="text-gold font-bold tracking-widest uppercase text-xs mb-2 block">Knowledge Base</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900">Latest Insights</h2>
-          </div>
-          <Link href="/articles" className="hidden md:flex items-center gap-2 text-slate-900 font-bold hover:text-eco-green transition-colors">
-            View All Articles <Sparkles className="w-4 h-4" />
-          </Link>
-        </div>
+      {/* 2. Service Cards (LEFT) & FAQ (RIGHT) - Combined Section */}
+      <div className="container mx-auto px-4 mt-12 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.length > 0 ? (
-            posts.slice(0, 3).map((post: any) => (
-              <Link href={`/articles/${post.slug.current}`} key={post._id} className="group cursor-pointer">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                  {post.mainImageExternalUrl ? (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img
-                      src={post.mainImageExternalUrl}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  ) : post.mainImage && (
-                    <Image
-                      src={urlFor(post.mainImage).width(800).height(600).url()}
-                      alt={post.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  )}
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-eco-green uppercase tracking-wider">
-                    {post.categories?.[0] || 'Insight'}
+          {/* LEFT COLUMN: Service Cards (Stacked) - lg:col-span-5 */}
+          <div className="lg:col-span-5 space-y-6">
+            <h3 className="text-xl font-bold text-slate-900 uppercase tracking-widest mb-6 block lg:hidden">Our Services</h3>
+
+            {/* Card 1: Termite */}
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 flex flex-col sm:flex-row lg:flex-col gap-6 items-start">
+              <div className="w-12 h-12 rounded-full bg-green-50 flex shrink-0 items-center justify-center text-eco-green">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <div>
+                <h2 className="text-xl font-sans font-bold text-slate-800 mb-2">Termite Control in Noida</h2>
+                <p className="text-slate-500 mb-4 text-sm leading-relaxed">Protect your property with our advanced, odor-free drill-fill-seal termite treatment.</p>
+                <Link href="/pest-library" className="text-eco-green font-bold text-xs tracking-wide uppercase hover:opacity-80 flex items-center gap-1">Learn More <Sparkles className="w-3 h-3" /></Link>
+              </div>
+            </div>
+
+            {/* Card 2: General */}
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 flex flex-col sm:flex-row lg:flex-col gap-6 items-start">
+              <div className="w-12 h-12 rounded-full bg-orange-50 flex shrink-0 items-center justify-center text-gold">
+                <Bug className="w-6 h-6" />
+              </div>
+              <div>
+                <h2 className="text-xl font-sans font-bold text-slate-800 mb-2">General Pest Control</h2>
+                <p className="text-slate-500 mb-4 text-sm leading-relaxed">Complete sanitization against cockroaches, ants, and mosquitoes for a healthier home.</p>
+                <Link href="/pest-library" className="text-gold font-bold text-xs tracking-wide uppercase hover:opacity-80 flex items-center gap-1">View All Pests <Sparkles className="w-3 h-3" /></Link>
+              </div>
+            </div>
+
+            {/* Card 3: Eco-Safe */}
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 flex flex-col sm:flex-row lg:flex-col gap-6 items-start">
+              <div className="w-12 h-12 rounded-full bg-blue-50 flex shrink-0 items-center justify-center text-slate-600">
+                <Leaf className="w-6 h-6" />
+              </div>
+              <div>
+                <h2 className="text-xl font-sans font-bold text-slate-800 mb-2">Eco-Safe Protocol</h2>
+                <p className="text-slate-500 mb-4 text-sm leading-relaxed">We use government-approved, low-toxicity chemicals safe for children and pets.</p>
+                <Link href="/articles" className="text-slate-600 font-bold text-xs tracking-wide uppercase hover:opacity-80 flex items-center gap-1">Read Safety Policy <Sparkles className="w-3 h-3" /></Link>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN: FAQ Section - lg:col-span-7 */}
+          <div className="lg:col-span-7">
+            <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-100 shadow-sm h-full">
+              <div className="mb-10">
+                <span className="text-gold font-bold tracking-widest uppercase text-xs mb-3 block">Common Questions</span>
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+                <p className="text-slate-500">Everything you need to know about our pest control services in Noida.</p>
+              </div>
+
+              <div className="space-y-6">
+                {[
+                  { q: "Is the treatment safe for children and pets?", a: "Yes. We use government-approved, low-toxicity chemicals (CIB approved). However, we recommend keeping children and pets away from the treated area for 2-4 hours during the process." },
+                  { q: "Do I need to leave my house during treatment?", a: "For most general pest control (cockroaches, ants), you don't need to leave. For termite treatment (drilling) or intense fogging, we may recommend stepping out for a few hours." },
+                  { q: "How long does the treatment take?", a: "A standard 2BHK/3BHK apartment treatment takes about 30-45 minutes. Termite treatment is more intensive and can take 4-6 hours depending on the area." },
+                  { q: "Do you provide a warranty?", a: "Yes, we offer warranties ranging from 3 months to 2 years depending on the service (e.g., 2-year warranty for Anti-Termite Treatment)." }
+                ].map((faq, idx) => (
+                  <div key={idx} className="border-b border-slate-100 pb-6 last:border-0 last:pb-0">
+                    <h3 className="text-lg font-bold text-slate-900 mb-3 flex items-start gap-3">
+                      <span className="text-gold mt-1">0{idx + 1}.</span> {faq.q}
+                    </h3>
+                    <p className="text-slate-500 leading-relaxed pl-8 text-sm md:text-base">{faq.a}</p>
                   </div>
-                </div>
-                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-3 group-hover:text-eco-green transition-colors line-clamp-2">
-                  {post.title}
-                </h3>
-                <p className="text-slate-500 line-clamp-2 mb-4">
-                  {post.seoDescription || "Read more about this pest control topic..."}
-                </p>
-                <span className="text-gold font-bold text-sm flex items-center gap-2">
-                  Read Article <span className="text-xl leading-none">→</span>
-                </span>
-              </Link>
-            ))
-          ) : (
-            <p className="text-slate-500">No posts found.</p>
-          )}
-        </div>
+                ))}
+              </div>
+            </div>
+          </div>
 
-        <div className="mt-12 text-center md:hidden">
-          <Link href="/articles" className="inline-block bg-slate-100 text-slate-900 font-bold py-3 px-8 rounded-full hover:bg-slate-200 transition-colors">
-            View All Articles
-          </Link>
         </div>
       </div>
+
+
+
 
       {/* 4. CTA Section - Big Impact */}
       <div className="bg-slate-900 text-white py-24 px-4">
@@ -152,6 +180,6 @@ export default async function Home() {
         </div>
       </div>
 
-    </div>
+    </div >
   );
 }

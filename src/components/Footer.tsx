@@ -75,8 +75,8 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-4">
                                 <Mail className="w-5 h-5 text-gold shrink-0" />
-                                <a href="mailto:info@pestcontrolnoida.com" className="text-white/70 hover:text-gold transition-colors text-sm">
-                                    info@pestcontrolnoida.com
+                                <a href="mailto:info@pestcontrolnoida.in" className="text-white/70 hover:text-gold transition-colors text-sm">
+                                    info@pestcontrolnoida.in
                                 </a>
                             </li>
                         </ul>

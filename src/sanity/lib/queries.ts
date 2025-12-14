@@ -19,12 +19,25 @@ export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0] {
   slug,
   mainImage,
   mainImageExternalUrl,
+  mainImageExternalAlt,
   publishedAt,
   body,
   "categories": categories[]->title,
   "author": author->name,
   seoTitle,
-  seoDescription
+  seoDescription,
+  canonicalUrl,
+  "relatedPosts": *[_type == "post" && _id != ^._id] | order(publishedAt desc)[0...3] {
+    _id,
+    title,
+    slug,
+    publishedAt,
+    mainImage,
+    mainImageExternalUrl,
+    mainImageExternalAlt,
+    "categories": categories[]->title,
+    seoDescription
+  }
 }`;
 
 export const PESTS_QUERY = groq`*[_type == "pest"] | order(commonName asc) {
@@ -33,6 +46,7 @@ export const PESTS_QUERY = groq`*[_type == "pest"] | order(commonName asc) {
     slug,
     image,
     mainImageExternalUrl,
+    mainImageExternalAlt,
     dangerLevel
 }`;
 
@@ -43,8 +57,10 @@ export const PEST_QUERY = groq`*[_type == "pest" && slug.current == $slug][0] {
     commonName,
     scientificName,
     slug,
+    slug,
     image,
     mainImageExternalUrl,
+    mainImageExternalAlt,
     dangerLevel,
     seasonalActivity,
     behavior,

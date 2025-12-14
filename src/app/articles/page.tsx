@@ -1,17 +1,13 @@
 import { client } from "@/sanity/lib/client";
 import { POSTS_QUERY } from "@/sanity/lib/queries";
-import { urlFor } from "@/sanity/lib/image";
-import Image from "next/image";
-import Link from "next/link";
-import { Calendar, User, ArrowRight } from "lucide-react";
-import QuoteForm from "@/components/QuoteForm";
-import ArticleFeed from "@/components/ArticleFeed";
+import MagazineSection from "@/components/MagazineSection";
 
 // Revalidate every 60 seconds
-export const revalidate = 60;
+// Revalidate every 24 hours (86400 seconds)
+export const revalidate = 86400;
 
 export const metadata = {
-    title: 'Articles & Insights | The Green Shield Dispatch',
+    title: 'Articles & Insights | Pest Control Noida - a Unit of Lex Hygiene India',
     description: 'Expert pest control advice, industry updates, and home protection strategies.',
 };
 
@@ -33,20 +29,8 @@ export default async function ArticlesIndexPage() {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 py-12">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                    {/* Main Content Area - Articles Grid */}
-                    <div className="lg:col-span-2">
-                        <ArticleFeed posts={posts} />
-                    </div>
-
-                    {/* Sidebar */}
-                    <div className="space-y-8">
-                        <div className="sticky top-24">
-                            <QuoteForm />
-                        </div>
-                    </div>
-                </div>
+            <div className="-mt-12 relative z-20">
+                <MagazineSection posts={posts} showAll={true} />
             </div>
         </div>
     );

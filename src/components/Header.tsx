@@ -23,6 +23,7 @@ export default function Header() {
                 <nav className="hidden lg:flex items-center gap-8">
                     <Link href="/" className="text-sm font-medium text-slate-600 hover:text-gold transition-colors">Home</Link>
                     <Link href="/pest-library" className="text-sm font-medium text-slate-600 hover:text-gold transition-colors">Pest Library</Link>
+                    <Link href="/about-us" className="text-sm font-medium text-slate-600 hover:text-gold transition-colors">About Us</Link>
                     <Link href="/service-areas" className="text-sm font-medium text-slate-600 hover:text-gold transition-colors">Service Areas</Link>
                     <Link href="/articles" className="text-sm font-medium text-slate-600 hover:text-gold transition-colors">Articles</Link>
                     <Link href="/contact" className="text-sm font-medium text-slate-600 hover:text-gold transition-colors">Contact</Link>
@@ -58,29 +59,42 @@ export default function Header() {
 
             {/* Mobile Menu Overlay */}
             {isMenuOpen && (
-                <div className="fixed inset-0 bg-white z-40 lg:hidden pt-24 px-6 flex flex-col gap-6 animate-in slide-in-from-top-10 duration-200">
-                    <nav className="flex flex-col gap-4 text-center">
-                        <Link onClick={() => setIsMenuOpen(false)} href="/" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Home</Link>
-                        <Link onClick={() => setIsMenuOpen(false)} href="/pest-library" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Pest Library</Link>
-                        <Link onClick={() => setIsMenuOpen(false)} href="/service-areas" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Service Areas</Link>
-                        <Link onClick={() => setIsMenuOpen(false)} href="/articles" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Articles</Link>
-                        <Link onClick={() => setIsMenuOpen(false)} href="/contact" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Contact</Link>
-                    </nav>
+                <>
+                    {/* Backdrop */}
+                    <div
+                        className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 lg:hidden"
+                        onClick={() => setIsMenuOpen(false)}
+                    />
 
-                    <div className="flex flex-col gap-4 mt-4">
-                        <Link
-                            onClick={() => setIsMenuOpen(false)}
-                            href="/contact"
-                            className="bg-gold text-white text-center font-bold py-4 rounded-xl shadow-md"
-                        >
-                            Get Inspection
-                        </Link>
-                        <a href="tel:+918882333782" className="flex items-center justify-center gap-2 text-slate-600 font-bold py-2">
-                            <Phone className="w-5 h-5 text-gold" />
-                            +91 8882 333 782
-                        </a>
+                    {/* Floating Card Menu */}
+                    <div className="absolute top-full left-4 right-4 mt-2 bg-white rounded-3xl shadow-2xl border border-slate-100 p-6 flex flex-col gap-6 animate-in zoom-in-95 slide-in-from-top-2 duration-200 z-50 lg:hidden">
+                        <nav className="flex flex-col gap-2 text-center">
+                            <Link onClick={() => setIsMenuOpen(false)} href="/" className="text-base font-bold text-slate-700 py-3 hover:bg-slate-50 rounded-xl transition-colors">Home</Link>
+                            <Link onClick={() => setIsMenuOpen(false)} href="/pest-library" className="text-base font-bold text-slate-700 py-3 hover:bg-slate-50 rounded-xl transition-colors">Pest Library</Link>
+                            <Link onClick={() => setIsMenuOpen(false)} href="/about-us" className="text-base font-bold text-slate-700 py-3 hover:bg-slate-50 rounded-xl transition-colors">About Us</Link>
+                            <Link onClick={() => setIsMenuOpen(false)} href="/service-areas" className="text-base font-bold text-slate-700 py-3 hover:bg-slate-50 rounded-xl transition-colors">Service Areas</Link>
+                            <Link onClick={() => setIsMenuOpen(false)} href="/articles" className="text-base font-bold text-slate-700 py-3 hover:bg-slate-50 rounded-xl transition-colors">Articles</Link>
+                            <Link onClick={() => setIsMenuOpen(false)} href="/contact" className="text-base font-bold text-slate-700 py-3 hover:bg-slate-50 rounded-xl transition-colors">Contact</Link>
+                        </nav>
+
+                        <div className="flex flex-col gap-3 pt-4 border-t border-slate-100">
+                            <Link
+                                onClick={() => setIsMenuOpen(false)}
+                                href="/contact"
+                                className="bg-gold hover:bg-orange-600 text-white text-center font-bold py-3.5 rounded-xl shadow-md transition-all active:scale-95"
+                            >
+                                Get Inspection
+                            </Link>
+                            <a
+                                href="tel:+918882333782"
+                                className="flex items-center justify-center gap-2 bg-eco-green hover:bg-green-700 text-white font-bold py-3.5 rounded-xl shadow-md transition-all active:scale-95"
+                            >
+                                <Phone className="w-5 h-5" />
+                                Call +91 8882 333 782
+                            </a>
+                        </div>
                     </div>
-                </div>
+                </>
             )}
         </header>
     );

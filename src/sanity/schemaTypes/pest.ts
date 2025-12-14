@@ -37,6 +37,13 @@ export default defineType({
             description: 'Optional: Use an external URL (e.g., Cloudinary) instead of uploading an image.',
         }),
         defineField({
+            name: 'mainImageExternalAlt',
+            title: 'External Image Alt Text',
+            type: 'string',
+            description: 'Alt text for the external image. Important for SEO. Defaults to common name if left empty.',
+            hidden: ({ document }) => !document?.mainImageExternalUrl
+        }),
+        defineField({
             name: 'dangerLevel',
             title: 'Danger Level',
             type: 'string',

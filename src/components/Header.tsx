@@ -13,7 +13,7 @@ export default function Header() {
 
                 {/* Logo Area */}
                 <Link href="/" className="flex items-center gap-2 group z-50 relative">
-                    <Shield className="w-6 h-6 md:w-8 md:h-8 text-eco-green group-hover:text-gold transition-colors" />
+                    <Shield className="w-6 h-6 md:w-8 md:h-8 text-gold group-hover:text-gold transition-colors" />
                     <span className="text-lg md:text-xl font-sans font-bold tracking-tight text-slate-900 group-hover:text-gold transition-colors">
                         Pest Control Noida<span className="text-eco-green"></span>
                     </span>

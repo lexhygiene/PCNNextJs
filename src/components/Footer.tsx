@@ -4,7 +4,7 @@ import { Shield, Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 export default function Footer() {
     return (
         <footer className="relative bg-gradient-to-br from-slate-900 to-eco-green text-white pt-20 pb-10 border-t border-white/10 overflow-hidden">
-            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] animate-pulse"></div>
+            <div className="absolute inset-0 opacity-10 bg-[url('/cubes.png')] animate-pulse"></div>
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 

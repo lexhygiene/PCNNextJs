@@ -25,7 +25,7 @@ export default async function Home() {
 
       {/* Hero Section - Gradient & Texture */}
       <div className="relative bg-gradient-to-br from-slate-900 to-eco-green text-white pt-12 pb-20 md:py-32 px-4 overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] animate-pulse"></div>
+        <div className="absolute inset-0 opacity-10 bg-[url('/cubes.png')] animate-pulse"></div>
         <div className="container mx-auto max-w-6xl text-center relative z-10">
           <span className="text-gold font-bold tracking-widest uppercase text-sm mb-6 block">Professional Pest Control Services</span>
           <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight">
@@ -100,7 +100,7 @@ export default async function Home() {
               <div>
                 <h2 className="text-xl font-sans font-bold text-slate-800 mb-2">Termite Control in Noida</h2>
                 <p className="text-slate-500 mb-4 text-sm leading-relaxed">Protect your property with our advanced, odor-free drill-fill-seal termite treatment.</p>
-                <Link href="/pest-library" className="text-eco-green font-bold text-xs tracking-wide uppercase hover:opacity-80 flex items-center gap-1">Learn More <Sparkles className="w-3 h-3" /></Link>
+                <Link href="/pest-library" className="text-eco-green font-bold text-xs tracking-wide uppercase hover:opacity-80 flex items-center gap-1">Visit Pest Library <Sparkles className="w-3 h-3" /></Link>
               </div>
             </div>
 

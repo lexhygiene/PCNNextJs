@@ -127,8 +127,7 @@ export default function MagazineSection({ posts: initialPosts, showAll = false }
                                 <Link href={`/articles/${post.slug.current}`} key={post._id} className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
                                     <div className="relative aspect-[16/9] bg-slate-200">
                                         {post.mainImageExternalUrl ? (
-                                            /* eslint-disable-next-line @next/next/no-img-element */
-                                            <img src={post.mainImageExternalUrl} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                            <Image src={post.mainImageExternalUrl} alt={post.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                                         ) : post.mainImage ? (
                                             <Image src={urlFor(post.mainImage).width(800).height(450).url()} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                                         ) : (
@@ -164,8 +163,7 @@ export default function MagazineSection({ posts: initialPosts, showAll = false }
                                             <Link href={`/articles/${post.slug.current}`} className="block w-full h-full">
                                                 <div className="absolute inset-0">
                                                     {post.mainImageExternalUrl ? (
-                                                        /* eslint-disable-next-line @next/next/no-img-element */
-                                                        <img src={post.mainImageExternalUrl} alt={post.title} className="w-full h-full object-cover" />
+                                                        <Image src={post.mainImageExternalUrl} alt={post.title} fill sizes="100vw" className="object-cover" />
                                                     ) : post.mainImage ? (
                                                         <Image src={urlFor(post.mainImage).width(1200).height(800).url()} alt={post.title} fill className="object-cover" />
                                                     ) : (
@@ -223,8 +221,7 @@ export default function MagazineSection({ posts: initialPosts, showAll = false }
                                                     <Link href={`/articles/${post.slug.current}`} key={post._id} className="group flex flex-col h-full">
                                                         <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-5 bg-slate-200 shadow-sm">
                                                             {post.mainImageExternalUrl ? (
-                                                                /* eslint-disable-next-line @next/next/no-img-element */
-                                                                <img src={post.mainImageExternalUrl} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                                                <Image src={post.mainImageExternalUrl} alt={post.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                                                             ) : post.mainImage ? (
                                                                 <Image src={urlFor(post.mainImage).width(800).height(450).url()} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                                                             ) : (

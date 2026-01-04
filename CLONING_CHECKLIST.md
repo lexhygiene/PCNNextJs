@@ -35,3 +35,35 @@ To deploy these, I will need:
 ## Content Strategy
 *   **Global Schema**: Will be set to `ParentOrganization: Lex Hygiene India` (Same as current site).
 *   **Visuals**: Will you use the same green/gold theme? `[Yes/No]`
+
+---
+# Detailed Execution Checklists (AI To Follow)
+
+## Branding & Visuals Configuration
+| Field | Value |
+| :--- | :--- |
+| **Primary Color** | `eco-green` (#current) [Change if needed] |
+| **Secondary Color** | `gold` (#current) [Change if needed] |
+| **Logo Text** | "Pest Control Noida" -> [New Logo Text] |
+| **Short Name** | "PCN" -> [New Short Name] |
+| **Logo File** | `/public/logo.png` [Provide new path if changed] |
+
+## Contact Information Mapping
+This will replace all instances across the site (Header, Footer, Sticky Bar, Contact Page).
+
+| Field | New Value (Site 1) | New Value (Site 2) |
+| :--- | :--- | :--- |
+| **Display Phone** | [e.g. +91 98765 43210] | [e.g. +91 98765 43210] |
+| **Email Address** | [e.g. info@lhitermite.com] | [e.g. info@newdomain.com] |
+| **Google Maps Link** | [Enter G-Maps URL] | [Enter G-Maps URL] |
+
+## Execution Plan
+1.  [ ] Clone repository to Target Directory.
+2.  [ ] Clean up `git` history (fresh start).
+3.  [ ] Find & Replace all "Pest Control Noida" -> "New Project Name".
+4.  [ ] Find & Replace all Contact Info (Phone, Email).
+5.  [ ] Update Color Variables in `tailwind.config.ts` and `globals.css` (if changed).
+6.  [ ] Update `manifest.json` and `sitemap.ts`.
+7.  [ ] **Verify Eco Mode**: Confirm `revalidate = 86400` (24h cache) is active on key pages.
+8.  [ ] **Performance Check**: Run Lighthouse/PageSpeed test to ensure high scores.
+9.  [ ] Verify build and deploy.

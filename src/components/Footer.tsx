@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import { Shield, Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
+import { sendGAEvent } from '@/lib/analytics';
 
 export default function Footer() {
     return (
@@ -69,13 +72,21 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-4">
                                 <Phone className="w-5 h-5 text-gold shrink-0" />
-                                <a href="tel:+918882333782" className="text-white/70 hover:text-gold transition-colors text-sm font-bold">
+                                <a
+                                    href="tel:+918882333782"
+                                    onClick={() => sendGAEvent('click_call', 'Footer Phone')}
+                                    className="text-white/70 hover:text-gold transition-colors text-sm font-bold"
+                                >
                                     +91 8882 333 782
                                 </a>
                             </li>
                             <li className="flex items-center gap-4">
                                 <Mail className="w-5 h-5 text-gold shrink-0" />
-                                <a href="mailto:info@pestcontrolnoida.in" className="text-white/70 hover:text-gold transition-colors text-sm">
+                                <a
+                                    href="mailto:info@pestcontrolnoida.in"
+                                    onClick={() => sendGAEvent('click_email', 'Footer Email')}
+                                    className="text-white/70 hover:text-gold transition-colors text-sm"
+                                >
                                     info@pestcontrolnoida.in
                                 </a>
                             </li>

@@ -4,14 +4,7 @@ import QuoteForm from '@/components/QuoteForm';
 import { ShieldCheck, Clock, Award, Star } from 'lucide-react';
 import Image from 'next/image';
 
-const sendGAEvent = (action: string, label: string) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', action, {
-            'event_category': 'Conversion',
-            'event_label': label
-        });
-    }
-};
+import { sendGAEvent } from '@/lib/analytics';
 
 export default function TermiteLandingPage() {
     return (
@@ -213,6 +206,16 @@ export default function TermiteLandingPage() {
                         ))}
                     </div>
 
+                    <div className="mb-12">
+                        <a
+                            href="tel:+918882333782"
+                            onClick={() => sendGAEvent('click_call', 'Reviews Section CTA')}
+                            className="inline-flex bg-gold hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition-all shadow-md hover:shadow-lg items-center gap-2"
+                        >
+                            <span>Join 390+ Happy Neighbors – Call Now</span>
+                        </a>
+                    </div>
+
                     {/* Mobile Trust Badge */}
                     <div className="md:hidden bg-slate-50 border border-slate-200 rounded-xl p-6 mb-8 text-center">
                         <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">A Unit of</p>
@@ -259,23 +262,38 @@ export default function TermiteLandingPage() {
                     <h2 className="text-3xl font-serif font-bold text-center mb-12">See Our Experts in Action</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-md">
-                            <Image
-                                src="https://res.cloudinary.com/drvdyd23p/image/upload/v1767527606/0a0827e7-2067-43ba-8e88-5b0cf86ef8b7_r5eiqr.jpg"
-                                alt="Technician drilling"
-                                fill
-                                className="object-cover"
+                            <video
+                                src="https://res.cloudinary.com/drvdyd23p/video/upload/v1767545245/WhatsApp_Video_2026-01-04_at_21.11.14_rp9mxi.mp4"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="object-cover w-full h-full"
                             />
                             <div className="absolute bottom-0 left-0 bg-black/60 text-white px-4 py-2 text-sm font-medium">Drill-Fill-Seal Process</div>
                         </div>
                         <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-md">
-                            <Image
-                                src="https://res.cloudinary.com/drvdyd23p/image/upload/v1767527812/7201c73a-07e0-41ce-b12c-a5cf3280867f_vb9k3g.jpg"
-                                alt="Technician spraying"
-                                fill
-                                className="object-cover"
+                            <video
+                                src="https://res.cloudinary.com/drvdyd23p/video/upload/v1767545268/WhatsApp_Video_2026-01-04_at_21.11.17_a2hoko.mp4"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="object-cover w-full h-full"
                             />
                             <div className="absolute bottom-0 left-0 bg-black/60 text-white px-4 py-2 text-sm font-medium">Uniformed Professionals</div>
                         </div>
+                    </div>
+
+                    <div className="mt-12 text-center">
+                        <a
+                            href="https://wa.me/918882333782?text=Hi,%20I%20saw%20your%20videos%20and%20want%20similar%20termite%20treatment"
+                            target="_blank"
+                            onClick={() => sendGAEvent('click_whatsapp', 'Video Section CTA')}
+                            className="inline-flex border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white font-bold py-3 px-8 rounded-full transition-all items-center gap-2"
+                        >
+                            <span>Get Professional Treatment – Book on WhatsApp</span>
+                        </a>
                     </div>
                 </div>
             </section>

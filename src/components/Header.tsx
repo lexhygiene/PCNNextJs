@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Shield, Phone, Menu, X } from 'lucide-react';
+import { sendGAEvent } from '@/lib/analytics';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +34,11 @@ export default function Header() {
                 <div className="hidden md:flex items-center gap-6">
                     <div className="flex items-center gap-2 text-slate-900">
                         <Phone className="w-5 h-5 text-gold" />
-                        <a href="tel:+918882333782" className="text-sm font-bold hover:text-gold transition-colors">
+                        <a
+                            href="tel:+918882333782"
+                            onClick={() => sendGAEvent('click_call', 'Header Phone')}
+                            className="text-sm font-bold hover:text-gold transition-colors"
+                        >
                             +91 8882 333 782
                         </a>
                     </div>
@@ -87,6 +92,7 @@ export default function Header() {
                             </Link>
                             <a
                                 href="tel:+918882333782"
+                                onClick={() => sendGAEvent('click_call', 'Mobile Menu Phone')}
                                 className="flex items-center justify-center gap-2 bg-eco-green hover:bg-green-700 text-white font-bold py-3.5 rounded-xl shadow-md transition-all active:scale-95"
                             >
                                 <Phone className="w-5 h-5" />

@@ -3,6 +3,7 @@
 import { Phone, MessageCircle, Star, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { sendGAEvent } from '@/lib/analytics';
 
 export default function StickyCTA() {
     const [isVisible, setIsVisible] = useState(false);
@@ -79,6 +80,7 @@ export default function StickyCTA() {
                         {/* 1. Phone */}
                         <a
                             href="tel:+918882333782"
+                            onClick={() => sendGAEvent('click_call', 'Sticky Bar Call')}
                             className="flex flex-col items-center justify-center gap-1 bg-eco-green/10 text-eco-green hover:bg-eco-green hover:text-white py-2 rounded-full transition-colors"
                         >
                             <Phone className="w-5 h-5" />
@@ -90,6 +92,7 @@ export default function StickyCTA() {
                             href="https://wa.me/918882333782"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => sendGAEvent('click_whatsapp', 'Sticky Bar WhatsApp')}
                             className="flex flex-col items-center justify-center gap-1 bg-green-50 text-[#25D366] hover:bg-[#25D366] hover:text-white py-2 rounded-full transition-colors"
                         >
                             <MessageCircle className="w-5 h-5" />
@@ -121,7 +124,11 @@ export default function StickyCTA() {
                     </div>
                     <div>
                         <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0.5">Need help?</p>
-                        <a href="tel:+918882333782" className="text-lg font-bold text-slate-900 hover:text-gold transition-colors block leading-none">
+                        <a
+                            href="tel:+918882333782"
+                            onClick={() => sendGAEvent('click_call', 'Floater Call')}
+                            className="text-lg font-bold text-slate-900 hover:text-gold transition-colors block leading-none"
+                        >
                             +91 8882333782
                         </a>
                     </div>

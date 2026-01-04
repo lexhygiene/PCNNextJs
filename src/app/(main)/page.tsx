@@ -5,6 +5,7 @@ import { POSTS_QUERY } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 import { ShieldCheck, Bug, Leaf, Search, Sparkles } from "lucide-react";
 import MagazineSection from "@/components/MagazineSection";
+import TrackedLink from "@/components/TrackedLink";
 
 // Revalidate every 60 seconds
 // Revalidate every 24 hours (86400 seconds)
@@ -170,9 +171,14 @@ export default async function Home() {
             Book a comprehensive inspection today and get a custom treatment plan for your home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+918882333782" className="bg-gold hover:bg-orange-600 text-white font-bold py-4 px-12 rounded-full transition-all text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
+            <TrackedLink
+              href="tel:+918882333782"
+              eventName="click_call"
+              eventLabel="Home Bottom CTA"
+              className="bg-gold hover:bg-orange-600 text-white font-bold py-4 px-12 rounded-full transition-all text-lg shadow-lg hover:shadow-xl hover:-translate-y-1"
+            >
               Call Now
-            </a>
+            </TrackedLink>
             <Link href="/contact" className="bg-transparent border-2 border-slate-700 hover:border-white text-white font-bold py-4 px-12 rounded-full transition-all text-lg">
               Book Online
             </Link>

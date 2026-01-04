@@ -183,7 +183,7 @@ export default function MagazineSection({ posts: initialPosts, showAll = false }
                                                     <div className="flex items-center gap-4 text-sm font-bold tracking-wide">
                                                         <div className="flex items-center gap-2">
                                                             <Calendar className="w-4 h-4 text-gold" />
-                                                            <span>{new Date(post.publishedAt || post._createdAt).toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                                                            <span>{new Date(post.publishedAt || post._createdAt).toLocaleDateString('en-GB', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -232,7 +232,7 @@ export default function MagazineSection({ posts: initialPosts, showAll = false }
                                                         <div className="flex flex-col flex-1">
                                                             <div className="flex items-center gap-2 text-xs text-slate-400 mb-3 font-medium uppercase tracking-wider">
                                                                 <Calendar className="w-3.5 h-3.5" />
-                                                                <span>{new Date(post.publishedAt || post._createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                                                                <span>{new Date(post.publishedAt || post._createdAt).toLocaleDateString('en-GB', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                                                             </div>
                                                             <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-eco-green transition-colors">
                                                                 {post.title}
@@ -263,7 +263,7 @@ export default function MagazineSection({ posts: initialPosts, showAll = false }
                                                         <div className="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium uppercase tracking-wider">
                                                             <span className="text-gold font-bold">{post.categories?.[0] || 'Article'}</span>
                                                             <span>•</span>
-                                                            <span>{new Date(post.publishedAt || post._createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                                                            <span>{new Date(post.publishedAt || post._createdAt).toLocaleDateString('en-GB', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                                                         </div>
                                                         <h3 className="text-lg font-bold text-slate-900 mb-3 leading-snug group-hover:text-gold transition-colors">
                                                             {post.title}

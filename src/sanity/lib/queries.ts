@@ -10,7 +10,8 @@ export const POSTS_QUERY = groq`*[_type == "post" && defined(slug.current)] | or
   mainImageExternalUrl,
   "categories": categories[]->title,
   "author": author->name,
-  seoDescription
+  seoDescription,
+  _createdAt
 }`;
 
 export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0] {

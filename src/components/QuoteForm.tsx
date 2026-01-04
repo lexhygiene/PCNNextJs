@@ -106,8 +106,8 @@ export default function QuoteForm() {
                 </div>
 
                 <div>
-                    <label className="block text-xs font-bold uppercase text-slate-500 mb-1.5 tracking-wider">Phone Number (Optional)</label>
-                    <input name="phone" value={formData.phone} onChange={handleChange} onFocus={handleInteraction} type="tel" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:border-eco-green focus:bg-white focus:ring-1 focus:ring-eco-green outline-none transition-all placeholder:text-slate-400 font-medium" placeholder="+91..." />
+                    <label className="block text-xs font-bold uppercase text-slate-500 mb-1.5 tracking-wider">Phone Number *</label>
+                    <input name="phone" value={formData.phone} onChange={handleChange} onFocus={handleInteraction} type="tel" required className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:border-eco-green focus:bg-white focus:ring-1 focus:ring-eco-green outline-none transition-all placeholder:text-slate-400 font-medium" placeholder="+91..." />
                 </div>
 
                 <div className="grid grid-cols-1 gap-6">
@@ -122,7 +122,7 @@ export default function QuoteForm() {
                     </div>
 
                     <div>
-                        <label className="block text-xs font-bold uppercase text-slate-500 mb-1.5 tracking-wider">Tell us about your home</label>
+                        <label className="block text-xs font-bold uppercase text-slate-500 mb-1.5 tracking-wider">Tell us about your home (Optional)</label>
                         <textarea name="description" value={formData.description} onChange={handleChange} onFocus={handleInteraction} rows={3} className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:border-eco-green focus:bg-white focus:ring-1 focus:ring-eco-green outline-none transition-all placeholder:text-slate-400 font-medium" placeholder="Looking for termite control services..."></textarea>
                     </div>
                 </div>

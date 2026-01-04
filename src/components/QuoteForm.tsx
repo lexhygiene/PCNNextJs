@@ -96,24 +96,24 @@ export default function QuoteForm() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label className="block text-xs font-bold uppercase text-slate-500 mb-1.5 tracking-wider">Full Name *</label>
-                        <input name="name" value={formData.name} onChange={handleChange} onFocus={handleInteraction} type="text" required className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:border-eco-green focus:bg-white focus:ring-1 focus:ring-eco-green outline-none transition-all placeholder:text-slate-400 font-medium" placeholder="John Doe" />
+                        <input name="name" value={formData.name} onChange={handleChange} onFocus={handleInteraction} type="text" required className="w-full px-4 py-3 bg-slate-50 text-slate-900 rounded-xl border border-slate-200 focus:border-eco-green focus:bg-white focus:ring-1 focus:ring-eco-green outline-none transition-all placeholder:text-slate-400 font-medium" placeholder="John Doe" />
                     </div>
 
                     <div>
                         <label className="block text-xs font-bold uppercase text-slate-500 mb-1.5 tracking-wider">Email Address *</label>
-                        <input name="email" value={formData.email} onChange={handleChange} onFocus={handleInteraction} type="email" required className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:border-eco-green focus:bg-white focus:ring-1 focus:ring-eco-green outline-none transition-all placeholder:text-slate-400 font-medium" placeholder="john@example.com" />
+                        <input name="email" value={formData.email} onChange={handleChange} onFocus={handleInteraction} type="email" required className="w-full px-4 py-3 bg-slate-50 text-slate-900 rounded-xl border border-slate-200 focus:border-eco-green focus:bg-white focus:ring-1 focus:ring-eco-green outline-none transition-all placeholder:text-slate-400 font-medium" placeholder="john@example.com" />
                     </div>
                 </div>
 
                 <div>
                     <label className="block text-xs font-bold uppercase text-slate-500 mb-1.5 tracking-wider">Phone Number *</label>
-                    <input name="phone" value={formData.phone} onChange={handleChange} onFocus={handleInteraction} type="tel" required className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:border-eco-green focus:bg-white focus:ring-1 focus:ring-eco-green outline-none transition-all placeholder:text-slate-400 font-medium" placeholder="+91..." />
+                    <input name="phone" value={formData.phone} onChange={handleChange} onFocus={handleInteraction} type="tel" required className="w-full px-4 py-3 bg-slate-50 text-slate-900 rounded-xl border border-slate-200 focus:border-eco-green focus:bg-white focus:ring-1 focus:ring-eco-green outline-none transition-all placeholder:text-slate-400 font-medium" placeholder="+91..." />
                 </div>
 
                 <div className="grid grid-cols-1 gap-6">
                     <div>
                         <label className="block text-xs font-bold uppercase text-slate-500 mb-1.5 tracking-wider">How did you hear about us?</label>
-                        <select name="heardAbout" value={formData.heardAbout} onChange={handleChange} onFocus={handleInteraction} className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:border-eco-green focus:bg-white focus:ring-1 focus:ring-eco-green outline-none transition-all text-slate-700 font-medium appearance-none">
+                        <select name="heardAbout" value={formData.heardAbout} onChange={handleChange} onFocus={handleInteraction} className="w-full px-4 py-3 bg-slate-50 text-slate-900 rounded-xl border border-slate-200 focus:border-eco-green focus:bg-white focus:ring-1 focus:ring-eco-green outline-none transition-all font-medium appearance-none">
                             <option>Google Search</option>
                             <option>Social Media</option>
                             <option>Friend Referral</option>
@@ -123,7 +123,7 @@ export default function QuoteForm() {
 
                     <div>
                         <label className="block text-xs font-bold uppercase text-slate-500 mb-1.5 tracking-wider">Tell us about your home (Optional)</label>
-                        <textarea name="description" value={formData.description} onChange={handleChange} onFocus={handleInteraction} rows={3} className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:border-eco-green focus:bg-white focus:ring-1 focus:ring-eco-green outline-none transition-all placeholder:text-slate-400 font-medium" placeholder="Looking for termite control services..."></textarea>
+                        <textarea name="description" value={formData.description} onChange={handleChange} onFocus={handleInteraction} rows={3} className="w-full px-4 py-3 bg-slate-50 text-slate-900 rounded-xl border border-slate-200 focus:border-eco-green focus:bg-white focus:ring-1 focus:ring-eco-green outline-none transition-all placeholder:text-slate-400 font-medium" placeholder="Looking for termite control services..."></textarea>
                     </div>
                 </div>
 

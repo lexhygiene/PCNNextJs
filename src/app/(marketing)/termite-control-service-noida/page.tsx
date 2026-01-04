@@ -48,8 +48,10 @@ export default function TermiteLandingPage() {
 
                     {/* Right Form */}
                     <div className="relative">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-gold to-eco-green rounded-2xl blur opacity-30"></div>
-                        <QuoteForm />
+                        <div className="absolute -inset-1 bg-gradient-to-r from-gold to-eco-green rounded-2xl blur opacity-30 pointer-events-none"></div>
+                        <div className="relative z-10">
+                            <QuoteForm />
+                        </div>
                     </div>
                 </div>
             </section>

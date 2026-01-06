@@ -60,6 +60,7 @@ export default async function PestPage(props: { params: Promise<{ slug: string }
                                 src={pest.mainImageExternalUrl}
                                 alt={pest.mainImageExternalAlt || pest.commonName}
                                 fill
+                                sizes="(max-width: 768px) 100px, 150px"
                                 className="object-cover"
                             />
                         ) : pest.image && (
@@ -67,6 +68,7 @@ export default async function PestPage(props: { params: Promise<{ slug: string }
                                 src={urlFor(pest.image).width(300).height(300).url()}
                                 alt={pest.commonName}
                                 fill
+                                sizes="(max-width: 768px) 100px, 150px"
                                 className="object-cover"
                             />
                         )}

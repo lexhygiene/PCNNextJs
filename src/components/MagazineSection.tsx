@@ -129,7 +129,7 @@ export default function MagazineSection({ posts: initialPosts, showAll = false }
                                         {post.mainImageExternalUrl ? (
                                             <Image src={post.mainImageExternalUrl} alt={post.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                                         ) : post.mainImage ? (
-                                            <Image src={urlFor(post.mainImage).width(800).height(450).url()} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                                            <Image src={urlFor(post.mainImage).width(800).height(450).url()} alt={post.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                                         ) : (
                                             <div className="w-full h-full bg-slate-800 flex items-center justify-center text-white/20 font-bold">No Image</div>
                                         )}
@@ -163,9 +163,9 @@ export default function MagazineSection({ posts: initialPosts, showAll = false }
                                             <Link href={`/articles/${post.slug.current}`} className="block w-full h-full">
                                                 <div className="absolute inset-0">
                                                     {post.mainImageExternalUrl ? (
-                                                        <Image src={post.mainImageExternalUrl} alt={post.title} fill sizes="100vw" className="object-cover" />
+                                                        <Image src={post.mainImageExternalUrl} alt={post.title} fill sizes="(max-width: 1024px) 100vw, 66vw" className="object-cover" />
                                                     ) : post.mainImage ? (
-                                                        <Image src={urlFor(post.mainImage).width(1200).height(800).url()} alt={post.title} fill className="object-cover" />
+                                                        <Image src={urlFor(post.mainImage).width(1200).height(800).url()} alt={post.title} fill sizes="(max-width: 1024px) 100vw, 66vw" className="object-cover" />
                                                     ) : (
                                                         <div className="w-full h-full bg-slate-800" />
                                                     )}
@@ -223,7 +223,7 @@ export default function MagazineSection({ posts: initialPosts, showAll = false }
                                                             {post.mainImageExternalUrl ? (
                                                                 <Image src={post.mainImageExternalUrl} alt={post.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                                                             ) : post.mainImage ? (
-                                                                <Image src={urlFor(post.mainImage).width(800).height(450).url()} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                                                                <Image src={urlFor(post.mainImage).width(800).height(450).url()} alt={post.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                                                             ) : (
                                                                 <div className="w-full h-full bg-slate-800 flex items-center justify-center text-white/20 font-bold">No Image</div>
                                                             )}

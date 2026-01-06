@@ -66,6 +66,7 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
                             src={urlFor(post.mainImage).width(1920).height(1080).url()}
                             alt={post.mainImage?.alt || post.title}
                             fill
+                            sizes="100vw"
                             className="object-cover blur-sm"
                         />
                     )}
@@ -114,6 +115,7 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
                                         alt={post.mainImage?.alt || post.title}
                                         width={1200}
                                         height={800}
+                                        sizes="(max-width: 1024px) 100vw, 800px"
                                         className="w-full h-auto"
                                     />
                                 </div>
@@ -159,6 +161,7 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
                                                 src={urlFor(relatedPost.mainImage).width(600).height(400).url()}
                                                 alt={relatedPost.title}
                                                 fill
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                             />
                                         ) : (

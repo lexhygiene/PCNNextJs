@@ -42,7 +42,7 @@ export default function TermiteLandingPage() {
 
                         <div className="mt-8 flex items-center justify-center lg:justify-start gap-2 text-sm text-slate-400">
                             <span className="w-2 h-2 bg-eco-green rounded-full animate-pulse"></span>
-                            Available Now in Noida Sectors 1-150
+                            Available Now in Noida Sectors 1-150 & NCR
                         </div>
                     </div>
 
@@ -93,7 +93,7 @@ export default function TermiteLandingPage() {
                             <div className="text-3xl font-bold text-gold mb-6">₹1,299<span className="text-sm text-slate-400 font-normal">/visit</span></div>
                             <ul className="space-y-4 mb-8 text-sm text-slate-600 flex-1">
                                 <li className="flex gap-2"><CheckIcon /> 1 Bedroom / Kitchen</li>
-                                <li className="flex gap-2"><CheckIcon /> Gel Baiting</li>
+                                <li className="flex gap-2"><CheckIcon /> Drill-Fill-Seal Tech</li>
                                 <li className="flex gap-2"><CheckIcon /> Odorless Spray</li>
                                 <li className="flex gap-2 text-slate-400"><XIcon /> Warranty</li>
                             </ul>

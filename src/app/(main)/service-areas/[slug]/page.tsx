@@ -106,6 +106,7 @@ export default async function ServiceAreaPage(props: { params: Promise<{ slug: s
                                                     src={pest.mainImageExternalUrl}
                                                     alt={pest.commonName}
                                                     fill
+                                                    sizes="(max-width: 768px) 100px, 150px"
                                                     className="object-cover"
                                                 />
                                             ) : pest.image ? (
@@ -113,6 +114,7 @@ export default async function ServiceAreaPage(props: { params: Promise<{ slug: s
                                                     src={urlFor(pest.image).width(150).height(150).url()}
                                                     alt={pest.commonName}
                                                     fill
+                                                    sizes="(max-width: 768px) 100px, 150px"
                                                     className="object-cover"
                                                 />
                                             ) : (

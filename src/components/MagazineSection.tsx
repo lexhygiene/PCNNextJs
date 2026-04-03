@@ -29,11 +29,16 @@ export default function MagazineSection({ posts: initialPosts, showAll = false }
         : allPosts;
 
     // 1. FILTERING LOGIC
-    // Tier 1: Featured (Slider) - Strict: Only 'featured' boolean (If search is active, we don't use this separate bucket usually, but efficient to keep logic clean)
-    const featuredPosts = posts.filter(p => p.featured);
+    // Tier 1: Featured (Slider) - Primary: Manual 'featured' toggle. Fallback: 3 Latest posts.
+    let featuredPosts = posts.filter(p => p.featured);
+    
+    if (featuredPosts.length === 0 && posts.length > 0) {
+        // If no featured posts, use the latest 3 posts as automatic features
+        featuredPosts = posts.slice(0, 3);
+    }
 
-    // Remaining posts for grids
-    const remainingPosts = posts.filter(p => !p.featured);
+    // Remaining posts for grids - Exclude exactly what's in the slider
+    const remainingPosts = posts.filter(p => !featuredPosts.some(fp => fp._id === p._id));
 
     // Tier 2: Visual Feed (Termite related) - Loose Matching
     const termitePosts = remainingPosts.filter(p =>

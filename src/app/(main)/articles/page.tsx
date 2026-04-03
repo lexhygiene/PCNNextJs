@@ -3,8 +3,8 @@ import { POSTS_QUERY } from "@/sanity/lib/queries";
 import MagazineSection from "@/components/MagazineSection";
 
 // Revalidate every 60 seconds
-// Revalidate every 24 hours (86400 seconds)
-export const revalidate = 86400;
+// Revalidate every 60 seconds
+export const revalidate = 60;
 
 export const metadata = {
     title: 'Articles & Insights | Pest Control Noida - a Unit of Lex Hygiene India',

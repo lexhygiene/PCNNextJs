@@ -8,8 +8,8 @@ import MagazineSection from "@/components/MagazineSection";
 import TrackedLink from "@/components/TrackedLink";
 
 // Revalidate every 60 seconds
-// Revalidate every 24 hours (86400 seconds)
-export const revalidate = 86400;
+// Revalidate every 60 seconds
+export const revalidate = 60;
 
 export const metadata = {
   title: 'Pest Control Noida & NCR | Expert Termite & Pest Removal',

@@ -46,14 +46,19 @@ export async function POST(request: Request) {
         }
 
         // 3. Configure Nodemailer Transporter
+        const smtpPort = Number(process.env.SMTP_PORT) || 587;
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
-            port: Number(process.env.SMTP_PORT),
-            secure: true, // true for 465, false for other ports
+            port: smtpPort,
+            secure: smtpPort === 465, // true for 465, false for other ports (like 587)
             auth: {
                 user: process.env.SMTP_USER,
                 pass: process.env.SMTP_PASS,
             },
+            tls: {
+                // Do not fail on invalid certs
+                rejectUnauthorized: false
+            }
         });
 
         // 4. Send Email

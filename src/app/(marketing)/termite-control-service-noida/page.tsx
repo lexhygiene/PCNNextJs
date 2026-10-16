@@ -185,7 +185,7 @@ export default function TermiteLandingPage() {
                             },
                             {
                                 name: "Lalit Kumar",
-                                review: "Excellent service by Lex Hygiene. The team was professional and the termite treatment was done very thoroughly. 5 Stars!",
+                                review: "Excellent service by LHI Pest Control. The team was professional and the termite treatment was done very thoroughly. 5 Stars!",
                                 date: "2 months ago"
                             }
                         ].map((review, i) => (
@@ -226,7 +226,7 @@ export default function TermiteLandingPage() {
                             <div className="flex">★★★★★</div>
                             <span>4.9 (390+ Reviews)</span>
                         </div>
-                        <a href="https://maps.google.com/?q=Lex+Hygiene+India" target="_blank" className="inline-block text-xs bg-white border border-slate-200 hover:bg-slate-50 px-4 py-2 rounded-full font-bold text-slate-700 transition-colors">
+                        <a href="https://maps.google.com/?q=LHI+Pest+Control" target="_blank" className="inline-block text-xs bg-white border border-slate-200 hover:bg-slate-50 px-4 py-2 rounded-full font-bold text-slate-700 transition-colors">
                             View on Google Maps
                         </a>
                     </div>
@@ -250,7 +250,7 @@ export default function TermiteLandingPage() {
                                     ★★★★★ 4.9 (390+ Reviews)
                                 </div>
                             </div>
-                            <a href="https://maps.google.com/?q=Lex+Hygiene+India" target="_blank" className="text-xs bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-md font-bold text-slate-600 transition-colors">
+                            <a href="https://maps.google.com/?q=LHI+Pest+Control" target="_blank" className="text-xs bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-md font-bold text-slate-600 transition-colors">
                                 View on Google
                             </a>
                         </div>

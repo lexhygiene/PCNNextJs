@@ -48,7 +48,7 @@ export default function FloatingReviewBadge() {
                     </div>
 
                     <Link
-                        href="https://www.google.com/search?q=Lex+Hygiene+India+reviews"
+                        href="https://www.google.com/search?q=LHI+Pest+Control+reviews"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block text-center w-full py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg text-sm transition-colors shadow-md shadow-blue-200"

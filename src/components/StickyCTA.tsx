@@ -63,7 +63,7 @@ export default function StickyCTA() {
                                 <span className="text-[10px] text-slate-500 block">380+ reviews</span>
                             </div>
                             <Link
-                                href="https://www.google.com/search?q=Lex+Hygiene+India+reviews"
+                                href="https://www.google.com/search?q=LHI+Pest+Control+reviews"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-lg text-sm font-bold shadow-sm"
@@ -172,7 +172,7 @@ export default function StickyCTA() {
                         </div>
 
                         <Link
-                            href="https://www.google.com/search?q=Lex+Hygiene+India+reviews"
+                            href="https://www.google.com/search?q=LHI+Pest+Control+reviews"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="block text-center w-full py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg text-sm transition-colors shadow-md shadow-blue-200"

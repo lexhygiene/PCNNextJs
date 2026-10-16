@@ -12,7 +12,7 @@ export default function MarketingLayout({
             <header className="fixed top-0 left-0 right-0 py-4 px-6 md:px-12 bg-white/90 backdrop-blur-md z-50 border-b border-slate-100 flex items-center justify-between">
                 <Link href="#" className="font-serif font-bold text-xl md:text-2xl text-slate-900 tracking-tight flex flex-col">
                     <span>Pest Control <span className="text-gold">Noida</span></span>
-                    <span className="text-[10px] md:text-xs text-slate-500 font-sans tracking-wide font-normal uppercase mt-0.5">A Unit of Lex Hygiene India</span>
+                    <span className="text-[10px] md:text-xs text-slate-500 font-sans tracking-wide font-normal uppercase mt-0.5">A Unit of LHI Pest Control</span>
                 </Link>
                 <a
                     href="tel:+918882333782"

@@ -221,7 +221,7 @@ export default function TermiteLandingPage() {
                     {/* Mobile Trust Badge */}
                     <div className="md:hidden bg-slate-50 border border-slate-200 rounded-xl p-6 mb-8 text-center">
                         <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">A Unit of</p>
-                        <h3 className="text-xl font-serif font-bold text-slate-900 mb-1">Lex Hygiene India</h3>
+                        <h3 className="text-xl font-serif font-bold text-slate-900 mb-1">LHI Pest Control</h3>
                         <div className="flex justify-center text-gold text-sm font-bold items-center gap-2 mb-4">
                             <div className="flex">★★★★★</div>
                             <span>4.9 (390+ Reviews)</span>
@@ -245,7 +245,7 @@ export default function TermiteLandingPage() {
                         ></iframe>
                         <div className="absolute bottom-4 left-4 bg-white p-4 rounded-xl shadow-lg border border-slate-100 flex items-center gap-4 hidden md:flex">
                             <div className="text-left">
-                                <div className="font-bold text-slate-900 text-sm">Lex Hygiene India</div>
+                                <div className="font-bold text-slate-900 text-sm">LHI Pest Control</div>
                                 <div className="flex text-gold text-xs">
                                     ★★★★★ 4.9 (390+ Reviews)
                                 </div>

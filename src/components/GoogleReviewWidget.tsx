@@ -32,7 +32,7 @@ export default function GoogleReviewWidget() {
                 </div>
                 <div>
                     <h3 className="font-bold text-slate-900 leading-none">Google Reviews</h3>
-                    <p className="text-xs text-slate-500 mt-1">Lex Hygiene India</p>
+                    <p className="text-xs text-slate-500 mt-1">LHI Pest Control</p>
                 </div>
             </div>
 

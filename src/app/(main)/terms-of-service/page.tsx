@@ -20,7 +20,7 @@ export default function TermsPage() {
 
                     <h3>1. Services</h3>
                     <p>
-                        Pest Control Noida (a unit of Lex Hygiene India) provides residential and commercial pest control services in Noida, Greater Noida, Ghaziabad, and Gurgaon. All services are subject to availability and our standard service agreement.
+                        Pest Control Noida (a unit of LHI Pest Control) provides residential and commercial pest control services in Noida, Greater Noida, Ghaziabad, and Gurgaon. All services are subject to availability and our standard service agreement.
                     </p>
 
                     <h3>2. Pricing and Payments</h3>

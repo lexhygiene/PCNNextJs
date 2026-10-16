@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CheckCircle, Home } from "lucide-react";
 
 export const metadata = {
-    title: 'Thank You | Pest Control Noida - a Unit of Lex Hygiene India',
+    title: 'Thank You | Pest Control Noida - a Unit of LHI Pest Control',
     description: 'Thank you for your enquiry. We will be in touch shortly.',
     robots: {
         index: false,

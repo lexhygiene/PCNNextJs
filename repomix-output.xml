@@ -270,7 +270,7 @@ cpanel_deployment_guide.md
 </file>
 
 <file path="CLONING_CHECKLIST.md">
-# Cloning Checklist: Lex Hygiene India Units
+# Cloning Checklist: LHI Pest Control Units
 
 **Architecture Decision**: Standard Stack (Netlify + Sanity + Next.js).
 **Strategy**: Separate Sanity Projects (Cleanest data separation, no risk of content mixing).
@@ -305,7 +305,7 @@ To deploy these, I will need:
 4.  **Netlify Access**: Access to link the new GitHub repositories to Netlify.
 
 ## Content Strategy
-*   **Global Schema**: Will be set to `ParentOrganization: Lex Hygiene India` (Same as current site).
+*   **Global Schema**: Will be set to `ParentOrganization: LHI Pest Control` (Same as current site).
 *   **Visuals**: Will you use the same green/gold theme? `[Yes/No]`
 </file>
 
@@ -616,8 +616,8 @@ import QuoteForm from '@/components/QuoteForm';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'About Us | Pest Control Noida - a Unit of Lex Hygiene India',
-    description: 'Learn about Lex Hygiene India, a trusted pest control provider in Noida and Delhi NCR since 2008.',
+    title: 'About Us | Pest Control Noida - a Unit of LHI Pest Control',
+    description: 'Learn about LHI Pest Control, a trusted pest control provider in Noida and Delhi NCR since 2008.',
 };
 
 export default function AboutUsPage() {
@@ -629,7 +629,7 @@ export default function AboutUsPage() {
                 <div className="container mx-auto max-w-5xl text-center relative z-10">
                     <span className="text-gold font-bold tracking-widest uppercase text-xs mb-4 block">Our Story</span>
                     <h1 className="text-4xl md:text-5xl font-serif font-bold mb-2">About Pest Control Noida</h1>
-                    <p className="text-sm md:text-base text-slate-400 font-medium uppercase tracking-wider mb-6">a unit of Lex Hygiene India</p>
+                    <p className="text-sm md:text-base text-slate-400 font-medium uppercase tracking-wider mb-6">a unit of LHI Pest Control</p>
                     <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
                         Protecting homes and businesses in Noida & Delhi NCR with advanced, eco-friendly pest solutions for over 15 years.
                     </p>
@@ -647,7 +647,7 @@ export default function AboutUsPage() {
                                 <h2 className="text-3xl font-bold text-slate-900">Who We Are</h2>
                             </div>
                             <p className="text-slate-600 leading-relaxed text-lg mb-6">
-                                <strong className="text-slate-900">Pest Control Noida - a Unit of Lex Hygiene India</strong> is dedicated to providing premium pest control and hygiene services. Founded in 2016, we have grown from a small local team to a trusted name across the National Capital Region.
+                                <strong className="text-slate-900">Pest Control Noida - a Unit of LHI Pest Control</strong> is dedicated to providing premium pest control and hygiene services. Founded in 2016, we have grown from a small local team to a trusted name across the National Capital Region.
                             </p>
                             <p className="text-slate-600 leading-relaxed text-lg">
                                 We believe in a scientific approach to pest management. Instead of just spraying chemicals, we analyze the root cause of infestations, implement targeted treatments, and provide long-term prevention strategies ensuring a safe environment for your family and employees.
@@ -918,7 +918,7 @@ import MagazineSection from "@/components/MagazineSection";
 export const revalidate = 86400;
 
 export const metadata = {
-    title: 'Articles & Insights | Pest Control Noida - a Unit of Lex Hygiene India',
+    title: 'Articles & Insights | Pest Control Noida - a Unit of LHI Pest Control',
     description: 'Expert pest control advice, industry updates, and home protection strategies.',
 };
 
@@ -954,7 +954,7 @@ import QuoteForm from '@/components/QuoteForm';
 import GoogleReviewWidget from '@/components/GoogleReviewWidget';
 
 export const metadata = {
-    title: 'Contact Us | Pest Control Noida - a Unit of Lex Hygiene India',
+    title: 'Contact Us | Pest Control Noida - a Unit of LHI Pest Control',
     description: 'Get in touch with our expert team for pest control advice and services.',
 };
 
@@ -1018,7 +1018,7 @@ export default function ContactPage() {
                                 <h3 className="font-sans font-bold text-slate-900 mb-1 text-lg">Our Office</h3>
                                 <address className="text-slate-600 not-italic leading-relaxed text-sm">
                                     <span className="font-bold block mb-1">Pest Control Noida</span>
-                                    <span className="text-[10px] md:text-xs uppercase tracking-wider block mb-2 text-slate-400">a unit of Lex Hygiene India</span>
+                                    <span className="text-[10px] md:text-xs uppercase tracking-wider block mb-2 text-slate-400">a unit of LHI Pest Control</span>
                                     Logix City Centre, Noida,<br />
                                     Uttar Pradesh, India
                                 </address>
@@ -1585,7 +1585,7 @@ export default function PrivacyPolicyPage() {
                     <p className="text-lg">Last Updated: {new Date().toLocaleDateString()}</p>
 
                     <p>
-                        Welcome to Pest Control Noida (a unit of Lex Hygiene India). We are committed to protecting your privacy and ensuring your personal information is handled in a safe and responsible manner.
+                        Welcome to Pest Control Noida (a unit of LHI Pest Control). We are committed to protecting your privacy and ensuring your personal information is handled in a safe and responsible manner.
                     </p>
 
                     <h3>1. Information We Collect</h3>
@@ -1935,7 +1935,7 @@ export default function TermsPage() {
 
                     <h3>1. Services</h3>
                     <p>
-                        Pest Control Noida (a unit of Lex Hygiene India) provides residential and commercial pest control services in Noida, Greater Noida, Ghaziabad, and Gurgaon. All services are subject to availability and our standard service agreement.
+                        Pest Control Noida (a unit of LHI Pest Control) provides residential and commercial pest control services in Noida, Greater Noida, Ghaziabad, and Gurgaon. All services are subject to availability and our standard service agreement.
                     </p>
 
                     <h3>2. Pricing and Payments</h3>
@@ -1978,7 +1978,7 @@ import Link from "next/link";
 import { CheckCircle, Home } from "lucide-react";
 
 export const metadata = {
-    title: 'Thank You | Pest Control Noida - a Unit of Lex Hygiene India',
+    title: 'Thank You | Pest Control Noida - a Unit of LHI Pest Control',
     description: 'Thank you for your enquiry. We will be in touch shortly.',
     robots: {
         index: false,
@@ -2036,7 +2036,7 @@ export default function MarketingLayout({
             <header className="fixed top-0 left-0 right-0 py-4 px-6 md:px-12 bg-white/90 backdrop-blur-md z-50 border-b border-slate-100 flex items-center justify-between">
                 <Link href="#" className="font-serif font-bold text-xl md:text-2xl text-slate-900 tracking-tight flex flex-col">
                     <span>Pest Control <span className="text-gold">Noida</span></span>
-                    <span className="text-[10px] md:text-xs text-slate-500 font-sans tracking-wide font-normal uppercase mt-0.5">A Unit of Lex Hygiene India</span>
+                    <span className="text-[10px] md:text-xs text-slate-500 font-sans tracking-wide font-normal uppercase mt-0.5">A Unit of LHI Pest Control</span>
                 </Link>
                 <a
                     href="tel:+918882333782"
@@ -2289,7 +2289,7 @@ export default function TermiteLandingPage() {
                     {/* Mobile Trust Badge */}
                     <div className="md:hidden bg-slate-50 border border-slate-200 rounded-xl p-6 mb-8 text-center">
                         <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">A Unit of</p>
-                        <h3 className="text-xl font-serif font-bold text-slate-900 mb-1">Lex Hygiene India</h3>
+                        <h3 className="text-xl font-serif font-bold text-slate-900 mb-1">LHI Pest Control</h3>
                         <div className="flex justify-center text-gold text-sm font-bold items-center gap-2 mb-4">
                             <div className="flex">★★★★★</div>
                             <span>4.9 (390+ Reviews)</span>
@@ -2313,7 +2313,7 @@ export default function TermiteLandingPage() {
                         ></iframe>
                         <div className="absolute bottom-4 left-4 bg-white p-4 rounded-xl shadow-lg border border-slate-100 flex items-center gap-4 hidden md:flex">
                             <div className="text-left">
-                                <div className="font-bold text-slate-900 text-sm">Lex Hygiene India</div>
+                                <div className="font-bold text-slate-900 text-sm">LHI Pest Control</div>
                                 <div className="flex text-gold text-xs">
                                     ★★★★★ 4.9 (390+ Reviews)
                                 </div>
@@ -2628,7 +2628,7 @@ export default function GoogleReviewWidget() {
                 </div>
                 <div>
                     <h3 className="font-bold text-slate-900 leading-none">Google Reviews</h3>
-                    <p className="text-xs text-slate-500 mt-1">Lex Hygiene India</p>
+                    <p className="text-xs text-slate-500 mt-1">LHI Pest Control</p>
                 </div>
             </div>
 
@@ -4923,7 +4923,7 @@ export default function Footer() {
                                 <span className="text-2xl font-sans font-bold tracking-tight text-white leading-none">
                                     Pest Control Noida<span className="text-gold">.</span>
                                 </span>
-                                <span className="text-[10px] text-white/50 uppercase tracking-widest mt-1">A unit of Lex Hygiene India</span>
+                                <span className="text-[10px] text-white/50 uppercase tracking-widest mt-1">A unit of LHI Pest Control</span>
                             </div>
                         </Link>
                         <p className="text-white/70 leading-relaxed text-sm">
@@ -5034,7 +5034,7 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: '--font-montserrat
 export const metadata: Metadata = {
   title: {
     template: '%s | Pest Control Noida',
-    default: 'Pest Control Noida - A Unit of Lex Hygiene India | Expert Services',
+    default: 'Pest Control Noida - A Unit of LHI Pest Control | Expert Services',
   },
   description: 'Pro Pest Control Noida offers government-approved, eco-friendly termite, rodent, and cockroach control services. Residential & Commercial pest removal in Noida & NCR.',
   keywords: ['Pest Control Noida', 'Termite Control in Noida', 'Pest Control Service Noida', 'Cockroach Control Noida', 'Rodent Control Noida'],
@@ -5093,7 +5093,7 @@ export default function RootLayout({
               ],
               parentOrganization: {
                 '@type': 'Organization',
-                name: 'Lex Hygiene India'
+                name: 'LHI Pest Control'
               },
               contactPoint: {
                 '@type': 'ContactPoint',

@@ -1,4 +1,4 @@
-# Cloning Checklist: Lex Hygiene India Units
+# Cloning Checklist: LHI Pest Control Units
 
 **Architecture Decision**: Standard Stack (Netlify + Sanity + Next.js).
 **Strategy**: Separate Sanity Projects (Cleanest data separation, no risk of content mixing).
@@ -33,7 +33,7 @@ To deploy these, I will need:
 4.  **Netlify Access**: Access to link the new GitHub repositories to Netlify.
 
 ## Content Strategy
-*   **Global Schema**: Will be set to `ParentOrganization: Lex Hygiene India` (Same as current site).
+*   **Global Schema**: Will be set to `ParentOrganization: LHI Pest Control` (Same as current site).
 *   **Visuals**: Will you use the same green/gold theme? `[Yes/No]`
 
 ---

@@ -10,7 +10,7 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: '--font-montserrat
 export const metadata: Metadata = {
   title: {
     template: '%s | Pest Control Noida',
-    default: 'Pest Control Noida - A Unit of Lex Hygiene India | Expert Services',
+    default: 'Pest Control Noida - A Unit of LHI Pest Control | Expert Services',
   },
   description: 'Pro Pest Control Noida offers government-approved, eco-friendly termite, rodent, and cockroach control services. Residential & Commercial pest removal in Noida & NCR.',
   keywords: ['Pest Control Noida', 'Termite Control in Noida', 'Pest Control Service Noida', 'Cockroach Control Noida', 'Rodent Control Noida'],
@@ -69,7 +69,7 @@ export default function RootLayout({
               ],
               parentOrganization: {
                 '@type': 'Organization',
-                name: 'Lex Hygiene India'
+                name: 'LHI Pest Control'
               },
               contactPoint: {
                 '@type': 'ContactPoint',

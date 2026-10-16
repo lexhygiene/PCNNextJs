@@ -19,7 +19,7 @@ export default function Footer() {
                                 <span className="text-2xl font-sans font-bold tracking-tight text-white leading-none">
                                     Pest Control Noida<span className="text-gold">.</span>
                                 </span>
-                                <span className="text-[10px] text-white/50 uppercase tracking-widest mt-1">A unit of Lex Hygiene India</span>
+                                <span className="text-[10px] text-white/50 uppercase tracking-widest mt-1">A unit of LHI Pest Control</span>
                             </div>
                         </Link>
                         <p className="text-white/70 leading-relaxed text-sm">

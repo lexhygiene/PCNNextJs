@@ -7,7 +7,7 @@ import MagazineSection from "@/components/MagazineSection";
 export const revalidate = 60;
 
 export const metadata = {
-    title: 'Articles & Insights | Pest Control Noida - a Unit of Lex Hygiene India',
+    title: 'Articles & Insights | Pest Control Noida - a Unit of LHI Pest Control',
     description: 'Expert pest control advice, industry updates, and home protection strategies.',
 };
 

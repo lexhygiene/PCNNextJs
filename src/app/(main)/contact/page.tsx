@@ -3,7 +3,7 @@ import QuoteForm from '@/components/QuoteForm';
 import GoogleReviewWidget from '@/components/GoogleReviewWidget';
 
 export const metadata = {
-    title: 'Contact Us | Pest Control Noida - a Unit of Lex Hygiene India',
+    title: 'Contact Us | Pest Control Noida - a Unit of LHI Pest Control',
     description: 'Get in touch with our expert team for pest control advice and services.',
 };
 
@@ -67,7 +67,7 @@ export default function ContactPage() {
                                 <h3 className="font-sans font-bold text-slate-900 mb-1 text-lg">Our Office</h3>
                                 <address className="text-slate-600 not-italic leading-relaxed text-sm">
                                     <span className="font-bold block mb-1">Pest Control Noida</span>
-                                    <span className="text-[10px] md:text-xs uppercase tracking-wider block mb-2 text-slate-400">a unit of Lex Hygiene India</span>
+                                    <span className="text-[10px] md:text-xs uppercase tracking-wider block mb-2 text-slate-400">a unit of LHI Pest Control</span>
                                     Logix City Centre, Noida,<br />
                                     Uttar Pradesh, India
                                 </address>

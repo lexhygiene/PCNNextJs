@@ -3,8 +3,8 @@ import QuoteForm from '@/components/QuoteForm';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'About Us | Pest Control Noida - a Unit of Lex Hygiene India',
-    description: 'Learn about Lex Hygiene India, a trusted pest control provider in Noida and Delhi NCR since 2008.',
+    title: 'About Us | Pest Control Noida - a Unit of LHI Pest Control',
+    description: 'Learn about LHI Pest Control, a trusted pest control provider in Noida and Delhi NCR since 2008.',
 };
 
 export default function AboutUsPage() {
@@ -16,7 +16,7 @@ export default function AboutUsPage() {
                 <div className="container mx-auto max-w-5xl text-center relative z-10">
                     <span className="text-gold font-bold tracking-widest uppercase text-xs mb-4 block">Our Story</span>
                     <h1 className="text-4xl md:text-5xl font-serif font-bold mb-2">About Pest Control Noida</h1>
-                    <p className="text-sm md:text-base text-slate-400 font-medium uppercase tracking-wider mb-6">a unit of Lex Hygiene India</p>
+                    <p className="text-sm md:text-base text-slate-400 font-medium uppercase tracking-wider mb-6">a unit of LHI Pest Control</p>
                     <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
                         Protecting homes and businesses in Noida & Delhi NCR with advanced, eco-friendly pest solutions for over 15 years.
                     </p>
@@ -34,7 +34,7 @@ export default function AboutUsPage() {
                                 <h2 className="text-3xl font-bold text-slate-900">Who We Are</h2>
                             </div>
                             <p className="text-slate-600 leading-relaxed text-lg mb-6">
-                                <strong className="text-slate-900">Pest Control Noida - a Unit of Lex Hygiene India</strong> is dedicated to providing premium pest control and hygiene services. Founded in 2016, we have grown from a small local team to a trusted name across the National Capital Region.
+                                <strong className="text-slate-900">Pest Control Noida - a Unit of LHI Pest Control</strong> is dedicated to providing premium pest control and hygiene services. Founded in 2016, we have grown from a small local team to a trusted name across the National Capital Region.
                             </p>
                             <p className="text-slate-600 leading-relaxed text-lg">
                                 We believe in a scientific approach to pest management. Instead of just spraying chemicals, we analyze the root cause of infestations, implement targeted treatments, and provide long-term prevention strategies ensuring a safe environment for your family and employees.

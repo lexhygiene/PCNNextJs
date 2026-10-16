@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
                     <p className="text-lg">Last Updated: {new Date().toLocaleDateString()}</p>
 
                     <p>
-                        Welcome to Pest Control Noida (a unit of Lex Hygiene India). We are committed to protecting your privacy and ensuring your personal information is handled in a safe and responsible manner.
+                        Welcome to Pest Control Noida (a unit of LHI Pest Control). We are committed to protecting your privacy and ensuring your personal information is handled in a safe and responsible manner.
                     </p>
 
                     <h3>1. Information We Collect</h3>

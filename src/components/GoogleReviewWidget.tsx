@@ -49,7 +49,7 @@ export default function GoogleReviewWidget() {
             </div>
 
             <Link
-                href="https://www.google.com/search?q=Lex+Hygiene+India+reviews"
+                href="https://www.google.com/search?q=LHI+Pest+Control+reviews"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-center w-full py-2 bg-slate-50 hover:bg-slate-100 text-slate-600 font-medium rounded-lg text-sm transition-colors"

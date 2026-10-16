@@ -65,7 +65,7 @@ export async function POST(request: Request) {
         await transporter.sendMail({
             from: `"Website Lead" <${process.env.SMTP_USER}>`,
             to: 'info@pestcontrolnoida.in', // Your receiving email
-            cc: 'lexhygiene2020@gmail.com', // CC to Lex Hygiene
+            cc: 'lexhygiene2020@gmail.com', // CC to LHI
             replyTo: email,
             subject: `New Quote Request from ${name}`,
             text: `
